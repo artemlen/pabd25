@@ -22,11 +22,6 @@ housing_price_prediction/
 └── README.md
 ```
 
-### Требования
-```bash
-pip install -r requirements.txt
-```
-
 ### Данные
 Используемые данные включают следующие характеристики:
 * Площадь жилья
