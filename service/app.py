@@ -1,4 +1,13 @@
 from flask import Flask, request, jsonify, render_template
+import logging
+
+logger = logging.getLogger('my_logger')
+
+file_handler = logging.FileHandler('app.log', mode='w+')
+logger.addHandler(file_handler)
+
+
+logger.warning("Program start")
 
 app = Flask(__name__)
 
@@ -13,6 +22,8 @@ def process_numbers():
     # Здесь можно добавить обработку полученных чисел
     # Для примера просто возвращаем их обратно
 
+    logger.warning("")
+
     data = request.get_json()
 
     if not data:
@@ -22,6 +33,11 @@ def process_numbers():
     num2 = data.get('number2')
     num3 = data.get('number3')
     num4 = data.get('number4')
+    logger.warning('data recieved')
+    logger.warning('Square: '+num1)
+    logger.warning('Num of rooms: '+num2)
+    logger.warning('Num of floors: '+num3)
+    logger.warning('Floor: '+num4)
 
     try:
         num1 = float(num1)
@@ -29,7 +45,9 @@ def process_numbers():
         num3 = int(num3)
         num4 = int(num4)
     except (ValueError, TypeError):
+        logger.warning("Не получилось преобразовать введенные данные")
         return {'status': 'error', 'message': 'Ошибка при обработке данных'}
+        
     
     print("\n=== Получены данные ===")
     print(f"Площадь квартиры: {data.get('number1')} м²")
@@ -37,9 +55,11 @@ def process_numbers():
     print(f"Этажей в доме: {data.get('number3')}")
     print(f"Этаж квартиры: {data.get('number4')}")
     print("=====================\n")
+    
 
-
+    logger.warning("Program ended")
     return {'status': 'success', 'data': 'Числа успешно обработаны'}
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
