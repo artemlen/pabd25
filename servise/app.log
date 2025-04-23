@@ -1,0 +1,196 @@
+2025-04-23 21:02:25,624 - INFO - Сервер запущен
+2025-04-23 21:02:25,653 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 21:02:25,653 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 21:02:25,655 - INFO -  * Restarting with stat
+2025-04-23 21:02:25,899 - INFO - Сервер запущен
+2025-04-23 21:02:25,911 - WARNING -  * Debugger is active!
+2025-04-23 21:02:25,914 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:02:30,392 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:30] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-23 21:02:30,503 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:30] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-23 21:02:30,506 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:30] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-23 21:02:30,517 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:30] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=Yrz15wEszVlC7Co4g9L9 HTTP/1.1" 200 -
+2025-04-23 21:02:30,527 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:30] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-23 21:02:31,202 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-23 21:02:31,211 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-23 21:02:31,213 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-23 21:02:31,225 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=Yrz15wEszVlC7Co4g9L9 HTTP/1.1[0m" 304 -
+2025-04-23 21:02:31,252 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-23 21:02:31,365 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-23 21:02:31,377 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-23 21:02:31,378 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-23 21:02:31,391 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png&s=Yrz15wEszVlC7Co4g9L9 HTTP/1.1[0m" 304 -
+2025-04-23 21:02:31,418 - INFO - 127.0.0.1 - - [23/Apr/2025 21:02:31] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-23 21:02:50,587 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:02:50,624 - INFO -  * Restarting with stat
+2025-04-23 21:02:50,865 - INFO - Сервер запущен
+2025-04-23 21:02:50,879 - WARNING -  * Debugger is active!
+2025-04-23 21:02:50,882 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:03:40,852 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:03:40,888 - INFO -  * Restarting with stat
+2025-04-23 21:04:45,285 - INFO - Сервер запущен
+2025-04-23 21:04:45,313 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-23 21:04:45,314 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-23 21:04:45,316 - INFO -  * Restarting with stat
+2025-04-23 21:04:45,654 - INFO - Сервер запущен
+2025-04-23 21:04:45,670 - WARNING -  * Debugger is active!
+2025-04-23 21:04:45,676 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:04:55,193 - INFO - 127.0.0.1 - - [23/Apr/2025 21:04:55] "GET / HTTP/1.1" 200 -
+2025-04-23 21:04:58,237 - INFO - 127.0.0.1 - - [23/Apr/2025 21:04:58] "GET / HTTP/1.1" 200 -
+2025-04-23 21:05:23,723 - INFO - Получен запрос на /api/numbers
+2025-04-23 21:05:23,723 - INFO - Данные успешно преобразованы: 12.0, 2, 2, 2
+2025-04-23 21:05:23,724 - INFO - 
+=== Получены данные ===
+2025-04-23 21:05:23,730 - INFO - Количество комнат: 2
+2025-04-23 21:05:23,731 - INFO - Этажей в доме: 2
+2025-04-23 21:05:23,731 - INFO - Этаж квартиры: 2
+2025-04-23 21:05:23,731 - INFO - =====================
+
+2025-04-23 21:05:23,731 - INFO - 127.0.0.1 - - [23/Apr/2025 21:05:23] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:07:57,426 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:07:57,465 - INFO -  * Restarting with stat
+2025-04-23 21:07:57,739 - INFO - Сервер запущен
+2025-04-23 21:07:57,751 - WARNING -  * Debugger is active!
+2025-04-23 21:07:57,754 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:11:05,000 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:11:05,034 - INFO -  * Restarting with stat
+2025-04-23 21:11:05,327 - INFO - The server is running
+2025-04-23 21:11:05,342 - WARNING -  * Debugger is active!
+2025-04-23 21:11:05,344 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:11:10,584 - INFO - 127.0.0.1 - - [23/Apr/2025 21:11:10] "GET / HTTP/1.1" 200 -
+2025-04-23 21:11:11,102 - INFO - 127.0.0.1 - - [23/Apr/2025 21:11:11] "GET / HTTP/1.1" 200 -
+2025-04-23 21:11:18,078 - INFO - Request received for /api/numberss
+2025-04-23 21:11:18,078 - INFO - The data has been successfully converted: 2.0, 2, 2, 2
+2025-04-23 21:11:18,078 - INFO - 
+=== Data received ===
+2025-04-23 21:11:18,084 - INFO - Number of rooms: 2
+2025-04-23 21:11:18,084 - INFO - Floors in the house: 2
+2025-04-23 21:11:18,084 - INFO - Apartment floor: 2
+2025-04-23 21:11:18,084 - INFO - =====================
+
+2025-04-23 21:11:18,094 - INFO - 127.0.0.1 - - [23/Apr/2025 21:11:18] "[35m[1mPOST /api/numbers HTTP/1.1[0m" 500 -
+2025-04-23 21:12:04,557 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:12:04,590 - INFO -  * Restarting with stat
+2025-04-23 21:12:04,847 - INFO - The server is running
+2025-04-23 21:12:04,861 - WARNING -  * Debugger is active!
+2025-04-23 21:12:04,863 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:12:05,991 - INFO - 127.0.0.1 - - [23/Apr/2025 21:12:05] "GET / HTTP/1.1" 200 -
+2025-04-23 21:12:09,489 - INFO - Request received for /api/numberss
+2025-04-23 21:12:09,489 - INFO - The data has been successfully converted: 2.0, 2, 2, 2
+2025-04-23 21:12:09,490 - INFO - === Data received ===
+2025-04-23 21:12:09,498 - INFO - Number of rooms: 2
+2025-04-23 21:12:09,498 - INFO - Floors in the house: 2
+2025-04-23 21:12:09,499 - INFO - Apartment floor: 2
+2025-04-23 21:12:09,499 - INFO - =====================
+
+2025-04-23 21:12:09,499 - INFO - 127.0.0.1 - - [23/Apr/2025 21:12:09] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:12:46,050 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:12:46,082 - INFO -  * Restarting with stat
+2025-04-23 21:12:46,376 - INFO - The server is running
+2025-04-23 21:12:46,390 - WARNING -  * Debugger is active!
+2025-04-23 21:12:46,393 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:12:47,173 - INFO - 127.0.0.1 - - [23/Apr/2025 21:12:47] "GET / HTTP/1.1" 200 -
+2025-04-23 21:12:50,975 - INFO - Request received for /api/numberss
+2025-04-23 21:12:50,975 - INFO - The data has been successfully converted: 2.0, 2, 22, 2
+2025-04-23 21:12:50,976 - INFO - === Data received ===
+2025-04-23 21:12:50,984 - INFO - Number of rooms: 2
+2025-04-23 21:12:50,984 - INFO - Floors in the house: 22
+2025-04-23 21:12:50,984 - INFO - Apartment floor: 2
+2025-04-23 21:12:50,985 - INFO - =====================
+
+2025-04-23 21:12:50,985 - INFO - 127.0.0.1 - - [23/Apr/2025 21:12:50] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:13:28,514 - INFO - Request received for /api/numberss
+2025-04-23 21:13:28,514 - INFO - The data has been successfully converted: 1.0, 2, 3, 4
+2025-04-23 21:13:28,514 - INFO - === Data received ===
+2025-04-23 21:13:28,517 - INFO - Number of rooms: 2
+2025-04-23 21:13:28,517 - INFO - Floors in the house: 3
+2025-04-23 21:13:28,517 - INFO - Apartment floor: 4
+2025-04-23 21:13:28,517 - INFO - =====================
+
+2025-04-23 21:13:28,518 - INFO - 127.0.0.1 - - [23/Apr/2025 21:13:28] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:14:14,145 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:14:14,181 - INFO -  * Restarting with stat
+2025-04-23 21:14:14,446 - INFO - The server is running
+2025-04-23 21:14:14,459 - WARNING -  * Debugger is active!
+2025-04-23 21:14:14,462 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:14:15,159 - INFO - 127.0.0.1 - - [23/Apr/2025 21:14:15] "GET / HTTP/1.1" 200 -
+2025-04-23 21:14:20,857 - INFO - Request received for /api/numberss
+2025-04-23 21:14:20,858 - INFO - The data has been successfully converted: 1.0, 2, 3, 4
+2025-04-23 21:14:20,858 - INFO - === Data received ===
+2025-04-23 21:14:20,858 - INFO - The area of the apartment: 1.0
+2025-04-23 21:14:20,859 - INFO - Number of rooms: 2
+2025-04-23 21:14:20,860 - INFO - Floors in the house: 3
+2025-04-23 21:14:20,860 - INFO - Apartment floor: 4
+2025-04-23 21:14:20,861 - INFO - =====================
+
+2025-04-23 21:14:20,862 - INFO - 127.0.0.1 - - [23/Apr/2025 21:14:20] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:17:04,860 - INFO - 127.0.0.1 - - [23/Apr/2025 21:17:04] "GET / HTTP/1.1" 200 -
+2025-04-23 21:17:09,357 - INFO - Request received for /api/numberss
+2025-04-23 21:17:09,358 - INFO - The data has been successfully converted: 1.0, 1, 1, 1
+2025-04-23 21:17:09,358 - INFO - === Data received ===
+2025-04-23 21:17:09,358 - INFO - The area of the apartment: 1.0
+2025-04-23 21:17:09,359 - INFO - Number of rooms: 1
+2025-04-23 21:17:09,360 - INFO - Floors in the house: 1
+2025-04-23 21:17:09,360 - INFO - Apartment floor: 1
+2025-04-23 21:17:09,361 - INFO - =====================
+
+2025-04-23 21:17:09,362 - INFO - 127.0.0.1 - - [23/Apr/2025 21:17:09] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:18:59,954 - INFO - 127.0.0.1 - - [23/Apr/2025 21:18:59] "GET / HTTP/1.1" 200 -
+2025-04-23 21:19:08,233 - INFO - Request received for /api/numberss
+2025-04-23 21:19:08,235 - INFO - The data has been successfully converted: 1.0, 1, 1, 1
+2025-04-23 21:19:08,235 - INFO - === Data received ===
+2025-04-23 21:19:08,236 - INFO - The area of the apartment: 1.0
+2025-04-23 21:19:08,237 - INFO - Number of rooms: 1
+2025-04-23 21:19:08,237 - INFO - Floors in the house: 1
+2025-04-23 21:19:08,237 - INFO - Apartment floor: 1
+2025-04-23 21:19:08,237 - INFO - =====================
+
+2025-04-23 21:19:08,238 - INFO - 127.0.0.1 - - [23/Apr/2025 21:19:08] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:19:54,689 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:19:54,720 - INFO -  * Restarting with stat
+2025-04-23 21:19:54,982 - INFO - The server is running
+2025-04-23 21:19:54,996 - WARNING -  * Debugger is active!
+2025-04-23 21:19:54,999 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:19:56,530 - INFO - 127.0.0.1 - - [23/Apr/2025 21:19:56] "GET / HTTP/1.1" 200 -
+2025-04-23 21:20:01,128 - INFO - Request received for /api/numberss
+2025-04-23 21:20:01,129 - INFO - The data has been successfully converted: 1.0, 1, 1, 1
+2025-04-23 21:20:01,129 - INFO - === Data received ===
+2025-04-23 21:20:01,129 - INFO - The area of the apartment: 1.0
+2025-04-23 21:20:01,130 - INFO - Number of rooms: 1
+2025-04-23 21:20:01,130 - INFO - Floors in the house: 1
+2025-04-23 21:20:01,130 - INFO - Apartment floor: 1
+2025-04-23 21:20:01,130 - INFO - =====================
+
+2025-04-23 21:20:01,131 - INFO - 127.0.0.1 - - [23/Apr/2025 21:20:01] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:22:14,386 - INFO - 127.0.0.1 - - [23/Apr/2025 21:22:14] "GET / HTTP/1.1" 200 -
+2025-04-23 21:22:18,279 - INFO - Request received for /api/numberss
+2025-04-23 21:22:18,279 - INFO - The data has been successfully converted: 1.0, 1, 1, 1
+2025-04-23 21:22:18,279 - INFO - === Data received ===
+2025-04-23 21:22:18,279 - INFO - The area of the apartment: 1.0
+2025-04-23 21:22:18,280 - INFO - Number of rooms: 1
+2025-04-23 21:22:18,280 - INFO - Floors in the house: 1
+2025-04-23 21:22:18,280 - INFO - Apartment floor: 1
+2025-04-23 21:22:18,280 - INFO - =====================
+
+2025-04-23 21:22:18,280 - INFO - 127.0.0.1 - - [23/Apr/2025 21:22:18] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:22:36,695 - INFO - Request received for /api/numberss
+2025-04-23 21:22:36,696 - INFO - The data has been successfully converted: 2.0, 1, 1, 1
+2025-04-23 21:22:36,697 - INFO - === Data received ===
+2025-04-23 21:22:36,697 - INFO - The area of the apartment: 2.0
+2025-04-23 21:22:36,698 - INFO - Number of rooms: 1
+2025-04-23 21:22:36,698 - INFO - Floors in the house: 1
+2025-04-23 21:22:36,699 - INFO - Apartment floor: 1
+2025-04-23 21:22:36,699 - INFO - =====================
+
+2025-04-23 21:22:36,700 - INFO - 127.0.0.1 - - [23/Apr/2025 21:22:36] "POST /api/numbers HTTP/1.1" 200 -
+2025-04-23 21:24:16,287 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:24:16,326 - INFO -  * Restarting with stat
+2025-04-23 21:24:16,682 - INFO - The server is running
+2025-04-23 21:24:16,703 - WARNING -  * Debugger is active!
+2025-04-23 21:24:16,706 - INFO -  * Debugger PIN: 497-750-970
+2025-04-23 21:24:33,372 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект\\servise\\app.py', reloading
+2025-04-23 21:24:33,416 - INFO -  * Restarting with stat
+2025-04-23 21:24:33,750 - INFO - The server is running
+2025-04-23 21:24:33,770 - WARNING -  * Debugger is active!
+2025-04-23 21:24:33,773 - INFO -  * Debugger PIN: 497-750-970
