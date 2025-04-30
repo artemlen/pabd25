@@ -1,6 +1,13 @@
 from flask import Flask, request, jsonify, render_template
 import logging
 from datetime import datetime
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score
+import pickle
+
 
 app = Flask(__name__)
 
@@ -8,11 +15,22 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('servise/app.log'), 
+        logging.FileHandler('service/app.log'), 
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
+
+
+
+ #Загрузка модели один раз при старте приложения
+try:
+    model = joblib.load('Price_predict.joblib')
+    logger.info("Model loaded successfully")
+except Exception as e:
+    logger.error(f"Failed to load model: {e}")
+    model = None
+
 
 # Маршрут для отображения формы
 @app.route('/')
@@ -45,6 +63,17 @@ def process_numbers():
         logger.error(f"Error in data processing: {e}")
         return {'status': 'error', 'message': 'Ошибка при обработке данных'}
     
+    with open('C:\\Users\\artem\\Documents\\Учеба\\PABD\\pabd25\\service\\model.pkl', 'rb') as f:
+        loaded_model = pickle.load(f)
+
+    input_df = pd.DataFrame([[num1, num2, num3, num4]],
+        columns=['total_meters', 'rooms_count', 'floors_count', 'floor'])
+
+    res = loaded_model.predict(input_df)[0]
+
+
+    #logger.info(f"Predicted price: {res}")
+
     logger.info("=== Data received ===")
     logger.info(f"The area of the apartment: {num1}")
     logger.info(f"Number of rooms: {num2}")
@@ -52,7 +81,7 @@ def process_numbers():
     logger.info(f"Apartment floor: {num4}")
     logger.info("=====================\n")
 
-    return {'status': 'success', 'message': 'Цена: ' + str(300000 *num1)}
+    return {'status': 'success', 'message': 'Цена: ' + str(res)}
 
 if __name__ == '__main__':
     logger.info("The server is running")

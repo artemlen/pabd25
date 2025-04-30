@@ -1,3 +1,4 @@
 cianparser
 pandas
 flask
+scikit-learn
