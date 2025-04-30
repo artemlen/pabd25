@@ -22,16 +22,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-
- #Загрузка модели один раз при старте приложения
-try:
-    model = joblib.load('Price_predict.joblib')
-    logger.info("Model loaded successfully")
-except Exception as e:
-    logger.error(f"Failed to load model: {e}")
-    model = None
-
-
 # Маршрут для отображения формы
 @app.route('/')
 def index():
