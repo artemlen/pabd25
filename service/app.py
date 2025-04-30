@@ -70,9 +70,7 @@ def process_numbers():
         columns=['total_meters', 'rooms_count', 'floors_count', 'floor'])
 
     res = loaded_model.predict(input_df)[0]
-
-
-    #logger.info(f"Predicted price: {res}")
+    logger.info(f"Predicted price: {res}")
 
     logger.info("=== Data received ===")
     logger.info(f"The area of the apartment: {num1}")
@@ -81,7 +79,7 @@ def process_numbers():
     logger.info(f"Apartment floor: {num4}")
     logger.info("=====================\n")
 
-    return {'status': 'success', 'message': 'Цена: ' + str(res)}
+    return {'status': 'success', 'message': 'Цена: ' + str(res.round(0))}
 
 if __name__ == '__main__':
     logger.info("The server is running")
