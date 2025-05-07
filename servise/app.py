@@ -4,6 +4,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from datetime import datetime
+import os
 
 app = Flask(__name__)
 
@@ -11,15 +12,60 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('servise/app.log'), 
+        logging.FileHandler('./pabd25/logs/app.log'), 
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
+def get_latest_file_scandir(directory):
+    """Более эффективный способ найти последний созданный файл"""
+    with os.scandir(directory) as entries:
+
+        files = [entry for entry in entries if entry.is_file()]
+        
+        if not files:
+            return None
+            
+        # Находим файл с максимальным временем создания
+        latest_file = max(files, key=lambda x: x.stat().st_ctime)
+        return latest_file.path
+
 # Загрузка модели при старте приложения
-model_path = "C:\\Users\\user\\Институт\\PABD25\\Проект_2\\models\\model_house_prise.pkl"
-model = joblib.load(model_path)
+latest_file = get_latest_file_scandir('./pabd25/models')
+print(latest_file)
+model = joblib.load(latest_file)
+
+def format_rubles(amount: float) -> str:
+    """
+    Форматирует сумму в рублях в читаемый вид: 13 млн 684 тыс 413 руб 15 коп
+    
+    Args:
+        amount: Сумма в рублях (float или int)
+        
+    Returns:
+        Отформатированная строка
+    """
+    rubles = int(amount)
+    kopecks = round((amount - rubles) * 100)
+    
+    millions = rubles // 1_000_000
+    rubles %= 1_000_000
+    
+    thousands = rubles // 1_000
+    rubles %= 1_000
+    
+    parts = []
+    if millions > 0:
+        parts.append(f"{millions} млн")
+    if thousands > 0:
+        parts.append(f"{thousands} тыс")
+    if rubles > 0 or not parts:
+        parts.append(f"{rubles} руб")
+    if kopecks > 0:
+        parts.append(f"{kopecks} коп")
+    
+    return ' '.join(parts)
 
 # Маршрут для отображения формы
 @app.route('/')
@@ -66,7 +112,7 @@ def process_numbers():
             prediction = model.predict([[num1, num4, num3, num2]])[0]
             predicted_price = round(float(prediction), 2)
             logger.info(f"Predicted price: {predicted_price}")
-            return {'status': 'success', 'message': f'Предсказанная цена: {predicted_price} руб.'}
+            return {'status': 'success', 'message': f'Предсказанная цена: {format_rubles(predicted_price)}'}
         except Exception as e:
             logger.error(f"Prediction error: {e}")
             return {'status': 'error', 'message': 'Ошибка при предсказании цены'}

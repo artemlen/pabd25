@@ -128,18 +128,29 @@
         
         #response {
             margin-top: 25px;
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
             text-align: center;
             font-weight: 500;
             display: none;
             animation: fadeIn 0.5s ease-out;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            word-wrap: break-word;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            white-space: pre-line;
         }
-        
+
         .success {
             background-color: rgba(76, 201, 240, 0.1);
             color: var(--primary);
             border-left: 4px solid var(--success);
+            border: 1px solid rgba(76, 201, 240, 0.3);
+            padding: 20px 15px;
         }
         
         .error {
@@ -320,9 +331,23 @@
         
         function showResponse(message, type) {
             const responseEl = document.getElementById('response');
-            responseEl.innerText = message;
+            
+            // Форматирование длинных чисел с переносами
+            const formattedMessage = message.replace(/(\d+ млн \d+ тыс \d+ руб \d+ коп)/g, 
+                '<span style="display: inline-block; text-align: center;">$1</span>');
+            
+            responseEl.innerHTML = formattedMessage;
             responseEl.className = type;
-            responseEl.style.display = 'block';
+            responseEl.style.display = 'flex'; // Используем flex для центрирования
+            
+            // Автоматическое увеличение шрифта для длинных сообщений
+            if (message.length > 50) {
+                responseEl.style.fontSize = '1rem';
+                responseEl.style.padding = '15px 10px';
+            } else {
+                responseEl.style.fontSize = '1.1rem';
+                responseEl.style.padding = '20px 15px';
+            }
         }
     </script>
 </body>

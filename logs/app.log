@@ -1,0 +1,233 @@
+2025-05-07 20:44:17,595 - root - INFO - Логирование настроено
+2025-05-07 20:44:17,596 - __main__ - INFO - Запуск пайплайна обработки данных
+2025-05-07 20:44:17,596 - __main__ - INFO - Начало этапа парсинга данных
+2025-05-07 20:44:17,598 - __main__ - INFO - Начало парсинга данных для 1-комнатных квартир
+2025-05-07 20:45:02,075 - __main__ - INFO - Сохранено 276 записей для 1-комнатных квартир в ./pabd25/data/raw/1к_2025-05-07_20-44.csv
+2025-05-07 20:45:02,076 - __main__ - INFO - Начало парсинга данных для 2-комнатных квартир
+2025-05-07 20:45:51,252 - __main__ - INFO - Сохранено 251 записей для 2-комнатных квартир в ./pabd25/data/raw/2к_2025-05-07_20-45.csv
+2025-05-07 20:45:51,261 - __main__ - INFO - Начало этапа очистки данных
+2025-05-07 20:45:51,268 - __main__ - INFO - Найдено 7 CSV файлов для обработки
+2025-05-07 20:45:51,455 - __main__ - INFO - Объединенный датасет содержит 4916 записей
+2025-05-07 20:45:51,459 - __main__ - INFO - Удалено 0 строк с пропущенными значениями
+2025-05-07 20:45:51,478 - __main__ - INFO - Удалено 816 дубликатов
+2025-05-07 20:45:51,498 - __main__ - INFO - Удалено 862 выбросов
+2025-05-07 20:45:51,498 - __main__ - INFO - Итоговый размер датасета: 3238 строк
+2025-05-07 20:45:51,513 - __main__ - INFO - Очищенные данные сохранены в ./pabd25/data/cleaned_data.csv
+2025-05-07 20:45:51,518 - __main__ - INFO - Начало этапа обучения модели
+2025-05-07 20:45:51,519 - __main__ - INFO - Начало обучения модели
+2025-05-07 20:45:51,524 - __main__ - INFO - Данные разделены: train=2590, test=648
+2025-05-07 20:45:51,530 - __main__ - INFO - Модель успешно обучена
+2025-05-07 20:45:51,564 - __main__ - INFO - Модель успешно сохранена в ./pabd25/models/house_price_model_2025-05-07_20-45.pkl
+2025-05-07 20:45:51,564 - __main__ - INFO - Тестирование модели на примере
+2025-05-07 20:45:51,587 - __main__ - INFO - Модель успешно загружена из ./pabd25/models/house_price_model_2025-05-07_20-45.pkl
+2025-05-07 20:45:51,599 - __main__ - INFO - Пайплайн успешно завершен
+2025-05-07 20:50:08,851 - root - INFO - Логирование настроено
+2025-05-07 20:50:08,851 - __main__ - INFO - Запуск пайплайна обработки данных
+2025-05-07 20:50:08,851 - __main__ - INFO - Начало этапа парсинга данных
+2025-05-07 20:50:08,852 - __main__ - INFO - Начало парсинга данных для 1-комнатных квартир
+2025-05-07 20:51:28,260 - INFO - The server is running
+2025-05-07 20:51:28,304 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-07 20:51:28,305 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-07 20:51:28,307 - INFO -  * Restarting with stat
+2025-05-07 20:51:29,368 - INFO - The server is running
+2025-05-07 20:51:29,375 - WARNING -  * Debugger is active!
+2025-05-07 20:51:29,378 - INFO -  * Debugger PIN: 497-750-970
+2025-05-07 20:51:38,797 - INFO - 127.0.0.1 - - [07/May/2025 20:51:38] "GET / HTTP/1.1" 200 -
+2025-05-07 20:51:46,772 - INFO - Request received for /api/numberss
+2025-05-07 20:51:46,773 - INFO - The data has been successfully converted: 30.0, 2, 10, 3
+2025-05-07 20:51:46,773 - INFO - === Data received ===
+2025-05-07 20:51:46,774 - INFO - The area of the apartment: 30.0
+2025-05-07 20:51:46,774 - INFO - Number of rooms: 2
+2025-05-07 20:51:46,775 - INFO - Floors in the house: 10
+2025-05-07 20:51:46,775 - INFO - Apartment floor: 3
+2025-05-07 20:51:46,775 - INFO - =====================
+
+2025-05-07 20:51:46,784 - INFO - Predicted price: 7853828.97
+2025-05-07 20:51:46,785 - INFO - 127.0.0.1 - - [07/May/2025 20:51:46] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:57:57,714 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект_3\\pabd25\\servise\\app.py', reloading
+2025-05-07 20:57:57,934 - INFO -  * Restarting with stat
+2025-05-07 20:57:59,836 - INFO - The server is running
+2025-05-07 20:57:59,845 - WARNING -  * Debugger is active!
+2025-05-07 20:57:59,848 - INFO -  * Debugger PIN: 497-750-970
+2025-05-07 20:58:03,417 - INFO - 127.0.0.1 - - [07/May/2025 20:58:03] "GET / HTTP/1.1" 200 -
+2025-05-07 20:58:10,241 - INFO - Request received for /api/numberss
+2025-05-07 20:58:10,243 - INFO - The data has been successfully converted: 40.0, 2, 11, 1
+2025-05-07 20:58:10,247 - INFO - === Data received ===
+2025-05-07 20:58:10,249 - INFO - The area of the apartment: 40.0
+2025-05-07 20:58:10,252 - INFO - Number of rooms: 2
+2025-05-07 20:58:10,253 - INFO - Floors in the house: 11
+2025-05-07 20:58:10,262 - INFO - Apartment floor: 1
+2025-05-07 20:58:10,277 - INFO - =====================
+
+2025-05-07 20:58:10,320 - INFO - Predicted price: 13684413.15
+2025-05-07 20:58:10,328 - INFO - 127.0.0.1 - - [07/May/2025 20:58:10] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:58:42,149 - INFO - Request received for /api/numberss
+2025-05-07 20:58:42,150 - INFO - The data has been successfully converted: 40.0, 2, 11, 5
+2025-05-07 20:58:42,150 - INFO - === Data received ===
+2025-05-07 20:58:42,151 - INFO - The area of the apartment: 40.0
+2025-05-07 20:58:42,152 - INFO - Number of rooms: 2
+2025-05-07 20:58:42,152 - INFO - Floors in the house: 11
+2025-05-07 20:58:42,153 - INFO - Apartment floor: 5
+2025-05-07 20:58:42,154 - INFO - =====================
+
+2025-05-07 20:58:42,158 - INFO - Predicted price: 13641066.53
+2025-05-07 20:58:42,161 - INFO - 127.0.0.1 - - [07/May/2025 20:58:42] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:58:43,107 - INFO - Request received for /api/numberss
+2025-05-07 20:58:43,109 - INFO - The data has been successfully converted: 40.0, 2, 11, 5
+2025-05-07 20:58:43,109 - INFO - === Data received ===
+2025-05-07 20:58:43,110 - INFO - The area of the apartment: 40.0
+2025-05-07 20:58:43,110 - INFO - Number of rooms: 2
+2025-05-07 20:58:43,111 - INFO - Floors in the house: 11
+2025-05-07 20:58:43,111 - INFO - Apartment floor: 5
+2025-05-07 20:58:43,112 - INFO - =====================
+
+2025-05-07 20:58:43,116 - INFO - Predicted price: 13641066.53
+2025-05-07 20:58:43,117 - INFO - 127.0.0.1 - - [07/May/2025 20:58:43] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:58:43,769 - INFO - Request received for /api/numberss
+2025-05-07 20:58:43,769 - INFO - The data has been successfully converted: 40.0, 2, 11, 5
+2025-05-07 20:58:43,771 - INFO - === Data received ===
+2025-05-07 20:58:43,771 - INFO - The area of the apartment: 40.0
+2025-05-07 20:58:43,772 - INFO - Number of rooms: 2
+2025-05-07 20:58:43,775 - INFO - Floors in the house: 11
+2025-05-07 20:58:43,776 - INFO - Apartment floor: 5
+2025-05-07 20:58:43,779 - INFO - =====================
+
+2025-05-07 20:58:43,782 - INFO - Predicted price: 13641066.53
+2025-05-07 20:58:43,783 - INFO - 127.0.0.1 - - [07/May/2025 20:58:43] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:58:44,106 - INFO - Request received for /api/numberss
+2025-05-07 20:58:44,108 - INFO - The data has been successfully converted: 40.0, 2, 11, 5
+2025-05-07 20:58:44,109 - INFO - === Data received ===
+2025-05-07 20:58:44,110 - INFO - The area of the apartment: 40.0
+2025-05-07 20:58:44,111 - INFO - Number of rooms: 2
+2025-05-07 20:58:44,112 - INFO - Floors in the house: 11
+2025-05-07 20:58:44,112 - INFO - Apartment floor: 5
+2025-05-07 20:58:44,116 - INFO - =====================
+
+2025-05-07 20:58:44,125 - INFO - Predicted price: 13641066.53
+2025-05-07 20:58:44,126 - INFO - 127.0.0.1 - - [07/May/2025 20:58:44] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:58:44,554 - INFO - Request received for /api/numberss
+2025-05-07 20:58:44,555 - INFO - The data has been successfully converted: 40.0, 2, 11, 5
+2025-05-07 20:58:44,556 - INFO - === Data received ===
+2025-05-07 20:58:44,557 - INFO - The area of the apartment: 40.0
+2025-05-07 20:58:44,557 - INFO - Number of rooms: 2
+2025-05-07 20:58:44,558 - INFO - Floors in the house: 11
+2025-05-07 20:58:44,559 - INFO - Apartment floor: 5
+2025-05-07 20:58:44,563 - INFO - =====================
+
+2025-05-07 20:58:44,571 - INFO - Predicted price: 13641066.53
+2025-05-07 20:58:44,578 - INFO - 127.0.0.1 - - [07/May/2025 20:58:44] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:58:47,638 - INFO - Request received for /api/numberss
+2025-05-07 20:58:47,640 - INFO - The data has been successfully converted: 40.0, 2, 11, 6
+2025-05-07 20:58:47,642 - INFO - === Data received ===
+2025-05-07 20:58:47,642 - INFO - The area of the apartment: 40.0
+2025-05-07 20:58:47,643 - INFO - Number of rooms: 2
+2025-05-07 20:58:47,644 - INFO - Floors in the house: 11
+2025-05-07 20:58:47,646 - INFO - Apartment floor: 6
+2025-05-07 20:58:47,647 - INFO - =====================
+
+2025-05-07 20:58:47,651 - INFO - Predicted price: 13630229.88
+2025-05-07 20:58:47,653 - INFO - 127.0.0.1 - - [07/May/2025 20:58:47] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:58:52,361 - INFO - Request received for /api/numberss
+2025-05-07 20:58:52,363 - INFO - The data has been successfully converted: 40.0, 2, 16, 6
+2025-05-07 20:58:52,366 - INFO - === Data received ===
+2025-05-07 20:58:52,368 - INFO - The area of the apartment: 40.0
+2025-05-07 20:58:52,375 - INFO - Number of rooms: 2
+2025-05-07 20:58:52,379 - INFO - Floors in the house: 16
+2025-05-07 20:58:52,387 - INFO - Apartment floor: 6
+2025-05-07 20:58:52,388 - INFO - =====================
+
+2025-05-07 20:58:52,400 - INFO - Predicted price: 14582089.89
+2025-05-07 20:58:52,408 - INFO - 127.0.0.1 - - [07/May/2025 20:58:52] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 20:59:39,608 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект_3\\pabd25\\servise\\app.py', reloading
+2025-05-07 20:59:39,830 - INFO -  * Restarting with stat
+2025-05-07 20:59:41,466 - INFO - The server is running
+2025-05-07 20:59:41,477 - WARNING -  * Debugger is active!
+2025-05-07 20:59:41,492 - INFO -  * Debugger PIN: 497-750-970
+2025-05-07 20:59:43,566 - INFO - 127.0.0.1 - - [07/May/2025 20:59:43] "GET / HTTP/1.1" 200 -
+2025-05-07 20:59:51,793 - INFO - Request received for /api/numberss
+2025-05-07 20:59:51,795 - INFO - The data has been successfully converted: 40.0, 3, 12, 4
+2025-05-07 20:59:51,795 - INFO - === Data received ===
+2025-05-07 20:59:51,796 - INFO - The area of the apartment: 40.0
+2025-05-07 20:59:51,796 - INFO - Number of rooms: 3
+2025-05-07 20:59:51,798 - INFO - Floors in the house: 12
+2025-05-07 20:59:51,799 - INFO - Apartment floor: 4
+2025-05-07 20:59:51,799 - INFO - =====================
+
+2025-05-07 20:59:51,814 - INFO - Predicted price: 12818633.92
+2025-05-07 20:59:51,818 - INFO - 127.0.0.1 - - [07/May/2025 20:59:51] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 21:00:32,516 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект_3\\pabd25\\servise\\app.py', reloading
+2025-05-07 21:00:32,728 - INFO -  * Restarting with stat
+2025-05-07 21:00:33,612 - INFO - The server is running
+2025-05-07 21:00:33,620 - WARNING -  * Debugger is active!
+2025-05-07 21:00:33,623 - INFO -  * Debugger PIN: 497-750-970
+2025-05-07 21:00:36,631 - INFO - 127.0.0.1 - - [07/May/2025 21:00:36] "GET / HTTP/1.1" 200 -
+2025-05-07 21:00:42,981 - INFO - Request received for /api/numberss
+2025-05-07 21:00:42,982 - INFO - The data has been successfully converted: 40.0, 4, 22, 2
+2025-05-07 21:00:42,983 - INFO - === Data received ===
+2025-05-07 21:00:42,984 - INFO - The area of the apartment: 40.0
+2025-05-07 21:00:42,985 - INFO - Number of rooms: 4
+2025-05-07 21:00:42,985 - INFO - Floors in the house: 22
+2025-05-07 21:00:42,986 - INFO - Apartment floor: 2
+2025-05-07 21:00:42,986 - INFO - =====================
+
+2025-05-07 21:00:43,265 - INFO - 127.0.0.1 - - [07/May/2025 21:00:43] "[35m[1mPOST /api/numbers HTTP/1.1[0m" 500 -
+2025-05-07 21:00:44,397 - INFO - Request received for /api/numberss
+2025-05-07 21:00:44,401 - INFO - The data has been successfully converted: 40.0, 4, 22, 2
+2025-05-07 21:00:44,402 - INFO - === Data received ===
+2025-05-07 21:00:44,403 - INFO - The area of the apartment: 40.0
+2025-05-07 21:00:44,404 - INFO - Number of rooms: 4
+2025-05-07 21:00:44,404 - INFO - Floors in the house: 22
+2025-05-07 21:00:44,408 - INFO - Apartment floor: 2
+2025-05-07 21:00:44,410 - INFO - =====================
+
+2025-05-07 21:00:44,487 - INFO - 127.0.0.1 - - [07/May/2025 21:00:44] "[35m[1mPOST /api/numbers HTTP/1.1[0m" 500 -
+2025-05-07 21:01:08,750 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект_3\\pabd25\\servise\\app.py', reloading
+2025-05-07 21:01:08,969 - INFO -  * Restarting with stat
+2025-05-07 21:01:11,044 - INFO - The server is running
+2025-05-07 21:01:11,056 - WARNING -  * Debugger is active!
+2025-05-07 21:01:11,061 - INFO -  * Debugger PIN: 497-750-970
+2025-05-07 21:01:11,377 - INFO - Request received for /api/numberss
+2025-05-07 21:01:11,378 - INFO - The data has been successfully converted: 40.0, 4, 22, 2
+2025-05-07 21:01:11,378 - INFO - === Data received ===
+2025-05-07 21:01:11,378 - INFO - The area of the apartment: 40.0
+2025-05-07 21:01:11,379 - INFO - Number of rooms: 4
+2025-05-07 21:01:11,379 - INFO - Floors in the house: 22
+2025-05-07 21:01:11,379 - INFO - Apartment floor: 2
+2025-05-07 21:01:11,379 - INFO - =====================
+
+2025-05-07 21:01:11,382 - INFO - Predicted price: 13720385.97
+2025-05-07 21:01:11,383 - INFO - 127.0.0.1 - - [07/May/2025 21:01:11] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 21:01:17,900 - INFO - Request received for /api/numberss
+2025-05-07 21:01:17,903 - INFO - The data has been successfully converted: 40.0, 4, 22, 3
+2025-05-07 21:01:17,905 - INFO - === Data received ===
+2025-05-07 21:01:17,907 - INFO - The area of the apartment: 40.0
+2025-05-07 21:01:17,910 - INFO - Number of rooms: 4
+2025-05-07 21:01:17,915 - INFO - Floors in the house: 22
+2025-05-07 21:01:17,919 - INFO - Apartment floor: 3
+2025-05-07 21:01:17,920 - INFO - =====================
+
+2025-05-07 21:01:17,935 - INFO - Predicted price: 13709549.32
+2025-05-07 21:01:17,939 - INFO - 127.0.0.1 - - [07/May/2025 21:01:17] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 21:05:06,400 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект_3\\pabd25\\servise\\app.py', reloading
+2025-05-07 21:05:06,694 - INFO -  * Restarting with stat
+2025-05-07 21:05:08,821 - INFO - The server is running
+2025-05-07 21:05:08,833 - WARNING -  * Debugger is active!
+2025-05-07 21:05:08,836 - INFO -  * Debugger PIN: 497-750-970
+2025-05-07 21:05:11,793 - INFO - 127.0.0.1 - - [07/May/2025 21:05:11] "GET / HTTP/1.1" 200 -
+2025-05-07 21:05:19,897 - INFO - Request received for /api/numberss
+2025-05-07 21:05:19,897 - INFO - The data has been successfully converted: 40.0, 2, 22, 4
+2025-05-07 21:05:19,898 - INFO - === Data received ===
+2025-05-07 21:05:19,898 - INFO - The area of the apartment: 40.0
+2025-05-07 21:05:19,898 - INFO - Number of rooms: 2
+2025-05-07 21:05:19,899 - INFO - Floors in the house: 22
+2025-05-07 21:05:19,899 - INFO - Apartment floor: 4
+2025-05-07 21:05:19,899 - INFO - =====================
+
+2025-05-07 21:05:19,905 - INFO - Predicted price: 15745995.21
+2025-05-07 21:05:19,910 - INFO - 127.0.0.1 - - [07/May/2025 21:05:19] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-07 21:06:45,859 - INFO -  * Detected change in 'c:\\Users\\user\\Институт\\PABD25\\Проект_3\\pabd25\\servise\\app.py', reloading
+2025-05-07 21:06:46,080 - INFO -  * Restarting with stat
+2025-05-07 21:06:47,580 - INFO - The server is running
+2025-05-07 21:06:47,590 - WARNING -  * Debugger is active!
+2025-05-07 21:06:47,594 - INFO -  * Debugger PIN: 497-750-970
