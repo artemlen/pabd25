@@ -1,5 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 import logging
+import joblib
+import numpy as np
+import pandas as pd
 from datetime import datetime
 
 app = Flask(__name__)
@@ -13,6 +16,10 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
+
+# Загрузка модели при старте приложения
+model_path = "C:\\Users\\user\\Институт\\PABD25\\Проект_2\\models\\model_house_prise.pkl"
+model = joblib.load(model_path)
 
 # Маршрут для отображения формы
 @app.route('/')
@@ -51,6 +58,21 @@ def process_numbers():
     logger.info(f"Floors in the house: {num3}")
     logger.info(f"Apartment floor: {num4}")
     logger.info("=====================\n")
+
+    if model is not None:
+        try:
+            # Преобразуем данные в 2D массив для модели
+            input_df = pd.DataFrame([[num1, num4, num3, num2]], columns=['total_meters', 'floors_count', 'floor', 'rooms_count'])
+            prediction = model.predict([[num1, num4, num3, num2]])[0]
+            predicted_price = round(float(prediction), 2)
+            logger.info(f"Predicted price: {predicted_price}")
+            return {'status': 'success', 'message': f'Предсказанная цена: {predicted_price} руб.'}
+        except Exception as e:
+            logger.error(f"Prediction error: {e}")
+            return {'status': 'error', 'message': 'Ошибка при предсказании цены'}
+    else:
+        logger.error("Model not available")
+        return {'status': 'error', 'message': 'Модель не загружена'}
 
     return {'status': 'success', 'message': 'Цена: ' + str(300000 *num1)}
 
