@@ -13,6 +13,7 @@ from typing import Optional
 from sklearn.model_selection import GridSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
+from sklearn.feature_selection import SelectKBest, f_regression
 
 # Настройка логирования
 def setup_logging(log_file: str = './pabd25/logs/app.log') -> None:
@@ -48,7 +49,7 @@ def parse_flats_data(n_rooms: int, output_dir: str = './pabd25/data/raw') -> pd.
             with_saving_csv=False,
             additional_settings={
                 "start_page": 1,
-                "end_page": 5,
+                "end_page": 10,
                 "object_type": "secondary"
             })
         
@@ -109,6 +110,9 @@ def clean_and_prepare_data() -> pd.DataFrame:
         logger.info(f"Удалено {initial_size - len(new_dataframe)} выбросов")
         logger.info(f"Итоговый размер датасета: {len(new_dataframe)} строк")
         
+        # Добавим новый признак - относительный этаж
+        new_dataframe['relative_floor'] = new_dataframe['floor'] / new_dataframe['floors_count']
+        
         # Сохранение очищенных данных
         cleaned_path = './pabd25/data/cleaned_data.csv'
         new_dataframe.to_csv(cleaned_path, index=False)
@@ -130,8 +134,11 @@ def train_and_evaluate_model(data: pd.DataFrame) -> GradientBoostingRegressor:
         logger.info("Начало обучения модели")
         
         # Разделение на признаки и целевую переменную
-        X = data[['total_meters', 'floor', 'floors_count', 'rooms_count']]
+        X = data[['total_meters', 'floor', 'floors_count', 'rooms_count', 'relative_floor']]
         y = data['price']
+        
+        # Логарифмирование цены для более нормального распределения
+        y = np.log1p(y)
         
         # Разделение на тренировочную и тестовую выборки
         X_train, X_test, y_train, y_test = train_test_split(
@@ -139,18 +146,20 @@ def train_and_evaluate_model(data: pd.DataFrame) -> GradientBoostingRegressor:
         
         logger.info(f"Данные разделены: train={len(X_train)}, test={len(X_test)}")
         
-        # Создание пайплайна с масштабированием и моделью
+        # Создание пайплайна с масштабированием, отбором признаков и моделью
         pipeline = Pipeline([
             ('scaler', StandardScaler()),
+            ('feature_selection', SelectKBest(f_regression, k=4)),
             ('model', GradientBoostingRegressor(random_state=42))
         ])
         
         # Параметры для подбора
         param_grid = {
-            'model__n_estimators': [100, 200],
-            'model__learning_rate': [0.05, 0.1],
-            'model__max_depth': [3, 5],
-            'model__min_samples_split': [2, 5]
+            'model__n_estimators': [100, 200, 300],
+            'model__learning_rate': [0.01, 0.05, 0.1],
+            'model__max_depth': [3, 4, 5],
+            'model__min_samples_split': [2, 5, 10],
+            'model__subsample': [0.8, 0.9, 1.0]
         }
         
         # Поиск по сетке с кросс-валидацией
@@ -173,11 +182,14 @@ def train_and_evaluate_model(data: pd.DataFrame) -> GradientBoostingRegressor:
         # Предсказание на тестовой выборке
         y_pred = model.predict(X_test)
         
-        # Оценка модели
-        mse = mean_squared_error(y_test, y_pred)
+        # Оценка модели (возвращаем к исходной шкале)
+        y_test_exp = np.expm1(y_test)
+        y_pred_exp = np.expm1(y_pred)
+        
+        mse = mean_squared_error(y_test_exp, y_pred_exp)
         rmse = np.sqrt(mse)
-        r2 = r2_score(y_test, y_pred)
-        mae = mean_absolute_error(y_test, y_pred)
+        r2 = r2_score(y_test_exp, y_pred_exp)
+        mae = mean_absolute_error(y_test_exp, y_pred_exp)
         
         logger.info(f"Лучшие параметры: {grid_search.best_params_}")
         logger.info(f"Метрики модели:\n"
@@ -223,8 +235,9 @@ def make_prediction(model: GradientBoostingRegressor,
                    rooms_count: int) -> float:
     """Делает предсказание цены квартиры с помощью модели."""
     try:
-        prediction = model.predict([[total_meters, floor, floors_count, rooms_count]])[0]
-        logger.info(f"Предсказанная цена для квартиры {total_meters} м², "
+        relative_floor = floor / floors_count
+        prediction = np.expm1(model.predict([[total_meters, floor, floors_count, rooms_count, relative_floor]])[0])
+        logger.info(f"Предсказанная цена для квартиры {total_meters} M2, "
                    f"{rooms_count} комнат, этаж {floor}/{floors_count}: {prediction:.2f} рублей")
         return prediction
     except Exception as e:
@@ -260,7 +273,7 @@ def main():
         model_path = f'./pabd25/models/gb_house_price_model_{t}.pkl'
         save_model(model, model_path)
         
-        # 5.использования модели
+        # 5. Использование модели
         logger.info("Тестирование модели на примере")
         loaded_model = load_model(model_path)
         if loaded_model:

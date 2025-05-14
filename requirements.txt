@@ -3,3 +3,7 @@ pandas
 flask
 numpy
 scikit-learn
+category_encoders
+geopandas
+geopy
+matplotlib

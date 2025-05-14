@@ -3,126 +3,124 @@ import logging
 import joblib
 import numpy as np
 import pandas as pd
-from datetime import datetime
 import os
 
 app = Flask(__name__)
 
+# Настройка логирования с UTF-8
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('./pabd25/logs/app.log'), 
+        logging.FileHandler('./pabd25/logs/app.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
-def get_latest_file_scandir(directory):
-    """Более эффективный способ найти последний созданный файл"""
-    with os.scandir(directory) as entries:
-
-        files = [entry for entry in entries if entry.is_file()]
-        
+def get_latest_model(directory):
+    """Находит последнюю обученную модель"""
+    try:
+        files = [f for f in os.listdir(directory) if f.endswith(('.pkl', '.joblib'))]
         if not files:
             return None
-            
-        # Находим файл с максимальным временем создания
-        latest_file = max(files, key=lambda x: x.stat().st_ctime)
-        return latest_file.path
+        latest_file = max(files, key=lambda f: os.path.getctime(os.path.join(directory, f)))
+        return os.path.join(directory, latest_file)
+    except Exception as e:
+        logger.error(f"Error finding model: {e}")
+        return None
 
-# Загрузка модели при старте приложения
-latest_file = get_latest_file_scandir('./pabd25/models')
-print(latest_file)
-model = joblib.load(latest_file)
+# Инициализация модели глобально
+model = None
+
+def load_model():
+    """Загружает модель при старте приложения"""
+    global model
+    model_path = get_latest_model('./pabd25/models')
+    if model_path:
+        try:
+            model = joblib.load(model_path)
+            logger.info(f"Model loaded successfully from {model_path}")
+            if hasattr(model, 'feature_names_in_'):
+                logger.info(f"Model expects features: {list(model.feature_names_in_)}")
+        except Exception as e:
+            logger.error(f"Error loading model: {e}")
+            model = None
+    else:
+        logger.error("No model found in directory")
+
+# Загружаем модель при старте
+load_model()
 
 def format_rubles(amount: float) -> str:
-    """
-    Форматирует сумму в рублях в читаемый вид: 13 млн 684 тыс 413 руб 15 коп
-    
-    Args:
-        amount: Сумма в рублях (float или int)
-        
-    Returns:
-        Отформатированная строка
-    """
-    rubles = int(amount)
-    kopecks = round((amount - rubles) * 100)
-    
-    millions = rubles // 1_000_000
-    rubles %= 1_000_000
-    
-    thousands = rubles // 1_000
-    rubles %= 1_000
-    
-    parts = []
-    if millions > 0:
-        parts.append(f"{millions} млн")
-    if thousands > 0:
-        parts.append(f"{thousands} тыс")
-    if rubles > 0 or not parts:
-        parts.append(f"{rubles} руб")
-    #if kopecks > 0:
-        #parts.append(f"{kopecks} коп")
-    
-    return ' '.join(parts)
+    """Форматирует сумму в рублях"""
+    amount = round(amount)
+    if amount >= 1_000_000:
+        return f"{amount // 1_000_000} млн {amount % 1_000_000 // 1_000} тыс руб"
+    elif amount >= 1_000:
+        return f"{amount // 1_000} тыс руб"
+    return f"{amount} руб"
 
-# Маршрут для отображения формы
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# Маршрут для обработки данных формы
 @app.route('/api/numbers', methods=['POST'])
 def process_numbers():
-
-    logger.info("Request received for /api/numberss")
+    logger.info("Request received for /api/numbers")
     data = request.get_json()
 
     if not data:
         logger.error("Error: no data received")
-        return {'status': 'error', 'message': 'Ошибка при получении данных. Данные не пришли'}
+        return {'status': 'error', 'message': 'Ошибка: данные не получены'}, 400
         
-    num1 = data.get('number1')
-    num2 = data.get('number2')
-    num3 = data.get('number3')
-    num4 = data.get('number4')
-
     try:
-        num1 = float(num1)
-        num2 = int(num2)
-        num3 = int(num3)
-        num4 = int(num4)
-        logger.info(f"The data has been successfully converted: {num1}, {num2}, {num3}, {num4}")
-    except (ValueError, TypeError) as e:
-        logger.error(f"Error in data processing: {e}")
-        return {'status': 'error', 'message': 'Ошибка при обработке данных'}
-    
-    logger.info("=== Data received ===")
-    logger.info(f"The area of the apartment: {num1}")
-    logger.info(f"Number of rooms: {num2}")
-    logger.info(f"Floors in the house: {num3}")
-    logger.info(f"Apartment floor: {num4}")
-    logger.info("=====================\n")
+        num1 = float(data.get('number1', 0))
+        num2 = int(data.get('number2', 1))
+        num3 = int(data.get('number3', 1))
+        num4 = int(data.get('number4', 1))
+        
+        logger.info(f"Input data: {num1}m², {num2} rooms, floor {num4}/{num3}")
 
-    if model is not None:
-        try:
-            # Преобразуем данные в 2D массив для модели
-            input_df = pd.DataFrame([[num1, num4, num3, num2]], columns=['total_meters', 'floors_count', 'floor', 'rooms_count'])
-            prediction = model.predict([[num1, num4, num3, num2]])[0]
-            predicted_price = round(float(prediction), 2)
-            logger.info(f"Predicted price: {predicted_price}")
-            return {'status': 'success', 'message': f'Предсказанная цена: {format_rubles(predicted_price)}'}
-        except Exception as e:
-            logger.error(f"Prediction error: {e}")
-            return {'status': 'error', 'message': 'Ошибка при предсказании цены'}
-    else:
-        logger.error("Model not available")
-        return {'status': 'error', 'message': 'Модель не загружена'}
+        if model is None:
+            raise RuntimeError("Модель не загружена")
 
-    return {'status': 'success', 'message': 'Цена: ' + str(300000 *num1)}
+        # Создаем DataFrame с правильными признаками
+        input_data = {
+            'total_meters': [num1],
+            'floor': [num4],
+            'floors_count': [num3],
+            'rooms_count': [num2]
+        }
+        
+        # Добавляем относительный этаж, если модель его требует
+        if hasattr(model, 'feature_names_in_') and 'relative_floor' in model.feature_names_in_:
+            input_data['relative_floor'] = [num4 / max(1, num3)]
+        
+        input_df = pd.DataFrame(input_data)
+        
+        # Убедимся, что порядок признаков соответствует ожиданиям модели
+        if hasattr(model, 'feature_names_in_'):
+            input_df = input_df[list(model.feature_names_in_)]
+        
+        # Делаем предсказание
+        prediction = model.predict(input_df)[0]
+        predicted_price = prediction * 1000000
+        
+        return {
+            'status': 'success',
+            'price': predicted_price,
+            'formatted_price': predicted_price,
+            'message': f'Предсказанная цена: {predicted_price}'
+        }
+
+    except Exception as e:
+        logger.error(f"Error in prediction: {str(e)}", exc_info=True)
+        return {
+            'status': 'error',
+            'message': f'Ошибка: {str(e)}'
+        }, 400
 
 if __name__ == '__main__':
-    logger.info("The server is running")
-    app.run(debug=True)
-
+    logger.info("Starting server...")
+    app.run(host='0.0.0.0', port=5000, debug=True)
