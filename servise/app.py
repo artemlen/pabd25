@@ -66,6 +66,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/api/numbers', methods=['POST'])
+@app.route('/api/numbers', methods=['POST'])
 def process_numbers():
     logger.info("Request received for /api/numbers")
     data = request.get_json()
@@ -93,25 +94,23 @@ def process_numbers():
             'rooms_count': [num2]
         }
         
-        # Добавляем относительный этаж, если модель его требует
         if hasattr(model, 'feature_names_in_') and 'relative_floor' in model.feature_names_in_:
             input_data['relative_floor'] = [num4 / max(1, num3)]
         
         input_df = pd.DataFrame(input_data)
         
-        # Убедимся, что порядок признаков соответствует ожиданиям модели
         if hasattr(model, 'feature_names_in_'):
             input_df = input_df[list(model.feature_names_in_)]
         
-        # Делаем предсказание
         prediction = model.predict(input_df)[0]
-        predicted_price = prediction * 1000000
+        predicted_price = (prediction * 1000000).round(0)
+        formatted_price = format_rubles(predicted_price)
         
         return {
             'status': 'success',
-            'price': predicted_price,
-            'formatted_price': predicted_price,
-            'message': f'Предсказанная цена: {predicted_price}'
+            'price': int(predicted_price),
+            'formatted_price': formatted_price,
+            'message': f'Предсказанная цена: {formatted_price}'
         }
 
     except Exception as e:
