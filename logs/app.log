@@ -350,3 +350,133 @@
 2025-05-14 20:20:14,482 - INFO - Predicted price: 15932997.31
 2025-05-14 20:20:14,484 - INFO - 127.0.0.1 - - [14/May/2025 20:20:14] "POST /api/numbers HTTP/1.1" 200 -
 2025-05-14 20:21:02,512 - INFO -  * Detected change in 'C:\\Users\\artem\\Documents\\Учеба\\2 полугодие\\PABD\\pabd25\\servise\\app.py', reloading
+2025-05-14 20:21:02,964 - INFO -  * Restarting with stat
+2025-05-14 20:21:06,540 - INFO - The server is running
+2025-05-14 20:21:06,557 - WARNING -  * Debugger is active!
+2025-05-14 20:21:06,562 - INFO -  * Debugger PIN: 616-719-574
+2025-05-14 20:21:06,668 - INFO - Request received for /api/numberss
+2025-05-14 20:21:06,669 - INFO - The data has been successfully converted: 45.0, 2, 16, 5
+2025-05-14 20:21:06,669 - INFO - === Data received ===
+2025-05-14 20:21:06,670 - INFO - The area of the apartment: 45.0
+2025-05-14 20:21:06,670 - INFO - Number of rooms: 2
+2025-05-14 20:21:06,670 - INFO - Floors in the house: 16
+2025-05-14 20:21:06,671 - INFO - Apartment floor: 5
+2025-05-14 20:21:06,671 - INFO - =====================
+
+2025-05-14 20:21:06,675 - INFO - Predicted price: 15932997.31
+2025-05-14 20:21:06,677 - INFO - 127.0.0.1 - - [14/May/2025 20:21:06] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:23:03,737 - INFO -  * Detected change in 'C:\\Users\\artem\\Documents\\Учеба\\2 полугодие\\PABD\\pabd25\\servise\\model.py', reloading
+2025-05-14 20:23:04,151 - INFO -  * Restarting with stat
+2025-05-14 20:23:07,593 - INFO - The server is running
+2025-05-14 20:23:07,611 - WARNING -  * Debugger is active!
+2025-05-14 20:23:07,615 - INFO -  * Debugger PIN: 616-719-574
+2025-05-14 20:26:36,082 - INFO - Request received for /api/numberss
+2025-05-14 20:26:36,083 - INFO - The data has been successfully converted: 72.0, 2, 16, 5
+2025-05-14 20:26:36,084 - INFO - === Data received ===
+2025-05-14 20:26:36,084 - INFO - The area of the apartment: 72.0
+2025-05-14 20:26:36,084 - INFO - Number of rooms: 2
+2025-05-14 20:26:36,085 - INFO - Floors in the house: 16
+2025-05-14 20:26:36,085 - INFO - Apartment floor: 5
+2025-05-14 20:26:36,089 - INFO - =====================
+
+2025-05-14 20:26:36,095 - INFO - Predicted price: 31270643.42
+2025-05-14 20:26:36,096 - INFO - 127.0.0.1 - - [14/May/2025 20:26:36] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:26:42,466 - INFO - Request received for /api/numberss
+2025-05-14 20:26:42,466 - INFO - The data has been successfully converted: 72.0, 4, 16, 5
+2025-05-14 20:26:42,467 - INFO - === Data received ===
+2025-05-14 20:26:42,467 - INFO - The area of the apartment: 72.0
+2025-05-14 20:26:42,468 - INFO - Number of rooms: 4
+2025-05-14 20:26:42,468 - INFO - Floors in the house: 16
+2025-05-14 20:26:42,469 - INFO - Apartment floor: 5
+2025-05-14 20:26:42,469 - INFO - =====================
+
+2025-05-14 20:26:42,475 - INFO - Predicted price: 26705264.67
+2025-05-14 20:26:42,476 - INFO - 127.0.0.1 - - [14/May/2025 20:26:42] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:26:53,214 - INFO - Request received for /api/numberss
+2025-05-14 20:26:53,215 - INFO - The data has been successfully converted: 72.0, 4, 5, 5
+2025-05-14 20:26:53,216 - INFO - === Data received ===
+2025-05-14 20:26:53,216 - INFO - The area of the apartment: 72.0
+2025-05-14 20:26:53,218 - INFO - Number of rooms: 4
+2025-05-14 20:26:53,218 - INFO - Floors in the house: 5
+2025-05-14 20:26:53,219 - INFO - Apartment floor: 5
+2025-05-14 20:26:53,221 - INFO - =====================
+
+2025-05-14 20:26:53,225 - INFO - Predicted price: 28511231.23
+2025-05-14 20:26:53,226 - INFO - 127.0.0.1 - - [14/May/2025 20:26:53] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:27:15,655 - INFO - Request received for /api/numberss
+2025-05-14 20:27:15,656 - INFO - The data has been successfully converted: 72.0, 1, 5, 5
+2025-05-14 20:27:15,656 - INFO - === Data received ===
+2025-05-14 20:27:15,656 - INFO - The area of the apartment: 72.0
+2025-05-14 20:27:15,657 - INFO - Number of rooms: 1
+2025-05-14 20:27:15,657 - INFO - Floors in the house: 5
+2025-05-14 20:27:15,657 - INFO - Apartment floor: 5
+2025-05-14 20:27:15,657 - INFO - =====================
+
+2025-05-14 20:27:15,660 - INFO - Predicted price: 35696937.43
+2025-05-14 20:27:15,661 - INFO - 127.0.0.1 - - [14/May/2025 20:27:15] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:27:20,954 - INFO - Request received for /api/numberss
+2025-05-14 20:27:20,954 - INFO - The data has been successfully converted: 24.0, 1, 5, 5
+2025-05-14 20:27:20,954 - INFO - === Data received ===
+2025-05-14 20:27:20,955 - INFO - The area of the apartment: 24.0
+2025-05-14 20:27:20,955 - INFO - Number of rooms: 1
+2025-05-14 20:27:20,955 - INFO - Floors in the house: 5
+2025-05-14 20:27:20,956 - INFO - Apartment floor: 5
+2025-05-14 20:27:20,956 - INFO - =====================
+
+2025-05-14 20:27:20,958 - INFO - Predicted price: 8052427.58
+2025-05-14 20:27:20,959 - INFO - 127.0.0.1 - - [14/May/2025 20:27:20] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:27:30,882 - INFO - Request received for /api/numberss
+2025-05-14 20:27:30,883 - INFO - The data has been successfully converted: 24.0, 1, 4, 3
+2025-05-14 20:27:30,883 - INFO - === Data received ===
+2025-05-14 20:27:30,884 - INFO - The area of the apartment: 24.0
+2025-05-14 20:27:30,884 - INFO - Number of rooms: 1
+2025-05-14 20:27:30,884 - INFO - Floors in the house: 4
+2025-05-14 20:27:30,885 - INFO - Apartment floor: 3
+2025-05-14 20:27:30,885 - INFO - =====================
+
+2025-05-14 20:27:30,888 - INFO - Predicted price: 8288747.86
+2025-05-14 20:27:30,889 - INFO - 127.0.0.1 - - [14/May/2025 20:27:30] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:27:36,863 - INFO - Request received for /api/numberss
+2025-05-14 20:27:36,864 - INFO - The data has been successfully converted: 45.0, 1, 4, 3
+2025-05-14 20:27:36,864 - INFO - === Data received ===
+2025-05-14 20:27:36,865 - INFO - The area of the apartment: 45.0
+2025-05-14 20:27:36,865 - INFO - Number of rooms: 1
+2025-05-14 20:27:36,865 - INFO - Floors in the house: 4
+2025-05-14 20:27:36,866 - INFO - Apartment floor: 3
+2025-05-14 20:27:36,867 - INFO - =====================
+
+2025-05-14 20:27:36,870 - INFO - Predicted price: 17788540.83
+2025-05-14 20:27:36,872 - INFO - 127.0.0.1 - - [14/May/2025 20:27:36] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:27:41,002 - INFO - Request received for /api/numberss
+2025-05-14 20:27:41,004 - INFO - The data has been successfully converted: 37.0, 1, 4, 3
+2025-05-14 20:27:41,005 - INFO - === Data received ===
+2025-05-14 20:27:41,006 - INFO - The area of the apartment: 37.0
+2025-05-14 20:27:41,007 - INFO - Number of rooms: 1
+2025-05-14 20:27:41,008 - INFO - Floors in the house: 4
+2025-05-14 20:27:41,009 - INFO - Apartment floor: 3
+2025-05-14 20:27:41,010 - INFO - =====================
+
+2025-05-14 20:27:41,017 - INFO - Predicted price: 10897317.57
+2025-05-14 20:27:41,018 - INFO - 127.0.0.1 - - [14/May/2025 20:27:41] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:27:50,932 - INFO - Request received for /api/numberss
+2025-05-14 20:27:50,933 - INFO - The data has been successfully converted: 37.0, 2, 4, 3
+2025-05-14 20:27:50,933 - INFO - === Data received ===
+2025-05-14 20:27:50,933 - INFO - The area of the apartment: 37.0
+2025-05-14 20:27:50,933 - INFO - Number of rooms: 2
+2025-05-14 20:27:50,934 - INFO - Floors in the house: 4
+2025-05-14 20:27:50,934 - INFO - Apartment floor: 3
+2025-05-14 20:27:50,934 - INFO - =====================
+
+2025-05-14 20:27:50,937 - INFO - Predicted price: 12729999.78
+2025-05-14 20:27:50,937 - INFO - 127.0.0.1 - - [14/May/2025 20:27:50] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:27:56,175 - INFO - Request received for /api/numberss
+2025-05-14 20:27:56,176 - INFO - The data has been successfully converted: 58.0, 2, 4, 3
+2025-05-14 20:27:56,177 - INFO - === Data received ===
+2025-05-14 20:27:56,177 - INFO - The area of the apartment: 58.0
+2025-05-14 20:27:56,177 - INFO - Number of rooms: 2
+2025-05-14 20:27:56,177 - INFO - Floors in the house: 4
+2025-05-14 20:27:56,178 - INFO - Apartment floor: 3
+2025-05-14 20:27:56,178 - INFO - =====================
+
+2025-05-14 20:27:56,182 - INFO - Predicted price: 26421651.77
+2025-05-14 20:27:56,183 - INFO - 127.0.0.1 - - [14/May/2025 20:27:56] "POST /api/numbers HTTP/1.1" 200 -

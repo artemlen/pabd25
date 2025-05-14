@@ -260,7 +260,7 @@ def main():
         model_path = f'./pabd25/models/gb_house_price_model_{t}.pkl'
         save_model(model, model_path)
         
-        # 5. Пример использования модели
+        # 5.использования модели
         logger.info("Тестирование модели на примере")
         loaded_model = load_model(model_path)
         if loaded_model:
