@@ -53,23 +53,14 @@ jupyter notebook
 ```
 
 ### Модели машинного обучения
-* **Linear Regression** - базовая линейная регрессия
-* **Random Forest** - ансамбль деревьев решений
-* **Gradient Boosting** - градиентный бустинг
 * **XGBoost** - экстремальный градиентный бустинг
-* **Neural Networks** - нейронные сети
+
 
 ### Метрики оценки
 * **Mean Absolute Error (MAE)**
 * **Mean Squared Error (MSE)**
 * **Root Mean Squared Error (RMSE)**
 * **R² Score**
-
-### Результаты
-После обучения модели достигаются следующие результаты:
-* MAE: ~$2000
-* RMSE: ~$2500
-* R² Score: ~0.85
 
 ### Как использовать модель
 1. Загрузите данные в формате CSV
@@ -78,15 +69,13 @@ jupyter notebook
 4. Сделайте предсказания
 
 ### Команда
-* **Data Scientist**: [Имя Фамилия]
-* **ML Engineer**: [Имя Фамилия]
-* **Product Manager**: [Имя Фамилия]
+* **Data Scientist**: Артём Ленгауэр
+* **ML Engineer**: Артём Ленгауэр
+* **Product Manager**: Артём Ленгауэр
 
 ### Лицензирование
 Этот проект распространяется под лицензией MIT. Смотрите файл LICENSE для деталей.
 
 ### Контакты
 Для вопросов и предложений обращайтесь:
-* Email: your.email@example.com
-* GitHub: @yourusername
-* LinkedIn: linkedin.com/in/yourusername
+* Email: artem_len@mail.ru
