@@ -266,3 +266,87 @@
 2025-05-14 20:05:21,005 - __main__ - INFO - Тестирование модели на примере
 2025-05-14 20:05:21,023 - __main__ - INFO - Модель успешно загружена из ./pabd25/models/gb_house_price_model_2025-05-14_20-05.pkl
 2025-05-14 20:05:21,028 - __main__ - INFO - Пайплайн успешно завершен
+2025-05-14 20:09:49,065 - INFO - The server is running
+2025-05-14 20:09:49,162 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-14 20:09:49,163 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-14 20:09:49,165 - INFO -  * Restarting with stat
+2025-05-14 20:09:51,971 - INFO - The server is running
+2025-05-14 20:09:51,988 - WARNING -  * Debugger is active!
+2025-05-14 20:09:51,992 - INFO -  * Debugger PIN: 616-719-574
+2025-05-14 20:10:02,593 - INFO - 127.0.0.1 - - [14/May/2025 20:10:02] "GET / HTTP/1.1" 200 -
+2025-05-14 20:10:03,337 - INFO - 127.0.0.1 - - [14/May/2025 20:10:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-14 20:10:29,865 - INFO - Request received for /api/numberss
+2025-05-14 20:10:29,868 - INFO - The data has been successfully converted: 40.0, 2, 5, 2
+2025-05-14 20:10:29,869 - INFO - === Data received ===
+2025-05-14 20:10:29,870 - INFO - The area of the apartment: 40.0
+2025-05-14 20:10:29,870 - INFO - Number of rooms: 2
+2025-05-14 20:10:29,870 - INFO - Floors in the house: 5
+2025-05-14 20:10:29,871 - INFO - Apartment floor: 2
+2025-05-14 20:10:29,871 - INFO - =====================
+
+2025-05-14 20:10:29,906 - INFO - Predicted price: 12257885.09
+2025-05-14 20:10:29,908 - INFO - 127.0.0.1 - - [14/May/2025 20:10:29] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:10:37,340 - INFO - Request received for /api/numberss
+2025-05-14 20:10:37,341 - INFO - The data has been successfully converted: 40.0, 2, 5, 3
+2025-05-14 20:10:37,342 - INFO - === Data received ===
+2025-05-14 20:10:37,347 - INFO - The area of the apartment: 40.0
+2025-05-14 20:10:37,348 - INFO - Number of rooms: 2
+2025-05-14 20:10:37,350 - INFO - Floors in the house: 5
+2025-05-14 20:10:37,351 - INFO - Apartment floor: 3
+2025-05-14 20:10:37,353 - INFO - =====================
+
+2025-05-14 20:10:37,360 - INFO - Predicted price: 12347079.48
+2025-05-14 20:10:37,367 - INFO - 127.0.0.1 - - [14/May/2025 20:10:37] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:10:41,401 - INFO - Request received for /api/numberss
+2025-05-14 20:10:41,402 - INFO - The data has been successfully converted: 40.0, 2, 8, 3
+2025-05-14 20:10:41,403 - INFO - === Data received ===
+2025-05-14 20:10:41,403 - INFO - The area of the apartment: 40.0
+2025-05-14 20:10:41,404 - INFO - Number of rooms: 2
+2025-05-14 20:10:41,404 - INFO - Floors in the house: 8
+2025-05-14 20:10:41,404 - INFO - Apartment floor: 3
+2025-05-14 20:10:41,405 - INFO - =====================
+
+2025-05-14 20:10:41,415 - INFO - Predicted price: 14761330.03
+2025-05-14 20:10:41,417 - INFO - 127.0.0.1 - - [14/May/2025 20:10:41] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:16:21,217 - INFO - The server is running
+2025-05-14 20:16:21,256 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-14 20:16:21,256 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-14 20:16:21,259 - INFO -  * Restarting with stat
+2025-05-14 20:16:24,198 - INFO - The server is running
+2025-05-14 20:16:24,216 - WARNING -  * Debugger is active!
+2025-05-14 20:16:24,219 - INFO -  * Debugger PIN: 616-719-574
+2025-05-14 20:16:28,156 - INFO - 127.0.0.1 - - [14/May/2025 20:16:28] "GET / HTTP/1.1" 200 -
+2025-05-14 20:18:27,743 - INFO - Request received for /api/numberss
+2025-05-14 20:18:27,744 - INFO - The data has been successfully converted: 45.0, 2, 5, 1
+2025-05-14 20:18:27,744 - INFO - === Data received ===
+2025-05-14 20:18:27,745 - INFO - The area of the apartment: 45.0
+2025-05-14 20:18:27,746 - INFO - Number of rooms: 2
+2025-05-14 20:18:27,746 - INFO - Floors in the house: 5
+2025-05-14 20:18:27,746 - INFO - Apartment floor: 1
+2025-05-14 20:18:27,746 - INFO - =====================
+
+2025-05-14 20:18:27,754 - INFO - Predicted price: 16856084.22
+2025-05-14 20:18:27,758 - INFO - 127.0.0.1 - - [14/May/2025 20:18:27] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:19:40,412 - INFO - The server is running
+2025-05-14 20:19:40,458 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-14 20:19:40,458 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-14 20:19:40,461 - INFO -  * Restarting with stat
+2025-05-14 20:19:43,417 - INFO - The server is running
+2025-05-14 20:19:43,436 - WARNING -  * Debugger is active!
+2025-05-14 20:19:43,440 - INFO -  * Debugger PIN: 616-719-574
+2025-05-14 20:19:47,753 - INFO - 127.0.0.1 - - [14/May/2025 20:19:47] "GET / HTTP/1.1" 200 -
+2025-05-14 20:20:14,472 - INFO - Request received for /api/numberss
+2025-05-14 20:20:14,472 - INFO - The data has been successfully converted: 45.0, 2, 16, 5
+2025-05-14 20:20:14,473 - INFO - === Data received ===
+2025-05-14 20:20:14,473 - INFO - The area of the apartment: 45.0
+2025-05-14 20:20:14,474 - INFO - Number of rooms: 2
+2025-05-14 20:20:14,474 - INFO - Floors in the house: 16
+2025-05-14 20:20:14,475 - INFO - Apartment floor: 5
+2025-05-14 20:20:14,475 - INFO - =====================
+
+2025-05-14 20:20:14,482 - INFO - Predicted price: 15932997.31
+2025-05-14 20:20:14,484 - INFO - 127.0.0.1 - - [14/May/2025 20:20:14] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-14 20:21:02,512 - INFO -  * Detected change in 'C:\\Users\\artem\\Documents\\Учеба\\2 полугодие\\PABD\\pabd25\\servise\\app.py', reloading

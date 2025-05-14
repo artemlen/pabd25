@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Калькулятор стоимости квартиры</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>RealEstate | Оценка стоимости</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4361ee;
-            --primary-light: #4895ef;
-            --secondary: #3f37c9;
-            --dark: #1b263b;
-            --light: #f8f9fa;
-            --success: #4cc9f0;
-            --danger: #f72585;
+            --primary: #7c3aed;
+            --primary-light: #8b5cf6;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --success: #10b981;
+            --error: #ef4444;
+            --border: #e5e7eb;
+            --accent: #ec4899;
         }
         
         * {
@@ -23,228 +26,280 @@
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Manrope', sans-serif;
+            background-color: #f9fafb;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            color: var(--dark);
+            background-image: radial-gradient(circle at 1px 1px, #e5e7eb 1px, transparent 0);
+            background-size: 20px 20px;
         }
         
-        .container {
+        .calculator {
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 18px;
+            box-shadow: 0 15px 50px rgba(124, 58, 237, 0.12);
             width: 100%;
-            max-width: 500px;
+            max-width: 480px;
             overflow: hidden;
-            animation: fadeIn 0.6s ease-out;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .calculator:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.18);
         }
         
         .header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            padding: 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            padding: 25px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: -30px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
         }
         
         .header h1 {
-            font-weight: 600;
-            font-size: 1.8rem;
-            margin-bottom: 5px;
+            font-weight: 700;
+            font-size: 26px;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
         }
         
         .header p {
-            opacity: 0.9;
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
         }
         
         .form-container {
-            padding: 30px;
+            padding: 32px;
         }
         
-        .form-group {
-            margin-bottom: 20px;
+        .input-group {
+            margin-bottom: 24px;
             position: relative;
         }
         
-        .form-group label {
+        .input-label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 600;
             color: var(--dark);
-            font-size: 0.9rem;
+            letter-spacing: 0.2px;
         }
         
-        .form-control {
+        .input-field {
             width: 100%;
-            padding: 15px;
-            border: 2px solid #e9ecef;
+            padding: 14px 18px;
+            border: 1px solid var(--border);
             border-radius: 10px;
-            font-size: 1rem;
-            transition: all 0.3s;
-            background-color: #f8f9fa;
+            font-size: 15px;
+            transition: all 0.25s;
+            background-color: white;
+            color: var(--dark);
+            font-weight: 500;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
         }
         
-        .form-control:focus {
+        .input-field:focus {
             outline: none;
-            border-color: var(--primary-light);
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
-            background-color: white;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+        }
+        
+        .input-field::placeholder {
+            color: var(--gray);
+            opacity: 0.6;
         }
         
         .error-message {
-            color: var(--danger);
-            font-size: 0.75rem;
-            margin-top: 5px;
+            color: var(--error);
+            font-size: 12px;
+            margin-top: 8px;
             display: none;
-            animation: shake 0.4s ease;
+            font-weight: 500;
+            padding-left: 4px;
         }
         
-        .btn {
+        .submit-btn {
             width: 100%;
-            padding: 15px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            padding: 16px;
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
             color: white;
             border: none;
             border-radius: 10px;
-            font-size: 1rem;
+            font-size: 15px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.25s;
             margin-top: 10px;
-            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+            position: relative;
+            overflow: hidden;
         }
         
-        .btn:hover {
+        .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(67, 97, 238, 0.4);
+            box-shadow: 0 6px 16px rgba(124, 58, 237, 0.25);
         }
         
-        .btn:active {
+        .submit-btn:active {
             transform: translateY(0);
         }
         
-        #response {
-            margin-top: 25px;
+        .submit-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            transition: all 0.3s;
+        }
+        
+        .submit-btn:hover::after {
+            left: 100%;
+        }
+        
+        .result-container {
+            margin-top: 28px;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
             font-weight: 500;
             display: none;
-            animation: fadeIn 0.5s ease-out;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            word-wrap: break-word;
-            min-height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            white-space: pre-line;
-        }
-
-        .success {
-            background-color: rgba(76, 201, 240, 0.1);
-            color: var(--primary);
-            border-left: 4px solid var(--success);
-            border: 1px solid rgba(76, 201, 240, 0.3);
-            padding: 20px 15px;
+            animation: fadeIn 0.4s ease-out;
+            font-size: 16px;
+            line-height: 1.5;
+            border: 1px solid transparent;
         }
         
-        .error {
-            background-color: rgba(247, 37, 133, 0.1);
-            color: var(--danger);
-            border-left: 4px solid var(--danger);
+        .result-success {
+            background-color: rgba(16, 185, 129, 0.08);
+            color: var(--success);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+        
+        .result-error {
+            background-color: rgba(239, 68, 68, 0.08);
+            color: var(--error);
+            border-color: rgba(239, 68, 68, 0.2);
+        }
+        
+        .result-loading {
+            color: var(--primary);
+            background-color: rgba(124, 58, 237, 0.08);
+            border-color: rgba(124, 58, 237, 0.2);
         }
         
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            20%, 60% { transform: translateX(-5px); }
-            40%, 80% { transform: translateX(5px); }
+        .input-icon {
+            position: absolute;
+            right: 16px;
+            top: 40px;
+            color: var(--gray);
+            font-size: 14px;
         }
         
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(67, 97, 238, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-        }
-        
-        .feature-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--primary);
-        }
-        
-        @media (max-width: 576px) {
-            .container {
-                border-radius: 15px;
+        @media (max-width: 480px) {
+            .calculator {
+                border-radius: 14px;
             }
             
             .header {
-                padding: 20px;
+                padding: 28px 24px;
             }
             
             .form-container {
-                padding: 20px;
+                padding: 28px;
+            }
+            
+            .header h1 {
+                font-size: 22px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="calculator">
         <div class="header">
-            <div class="feature-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
-                    <path d="M7 12h2v5H7zm4-7h2v12h-2zm4 4h2v8h-2z"/>
-                </svg>
-            </div>
-            <h1>Калькулятор стоимости квартиры</h1>
-            <p>Узнайте рыночную стоимость вашей недвижимости</p>
+            <h1>Оценка недвижимости</h1>
+            <p>Точный расчет рыночной стоимости за минуту</p>
         </div>
         
         <div class="form-container">
             <form id="numberForm">
-                <div class="form-group">
-                    <label for="num1">Площадь квартиры (м²)</label>
-                    <input type="number" class="form-control" id="num1" placeholder="30" min="10" max="300" step="0.1" required>
+                <div class="input-group">
+                    <label for="num1" class="input-label">Площадь квартиры</label>
+                    <input type="number" class="input-field" id="num1" placeholder="45" min="10" max="300" step="0.1" required>
                     <div id="error1" class="error-message">Введите площадь от 10 до 300 м²</div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="num2">Количество комнат</label>
-                    <input type="number" class="form-control" id="num2" placeholder="2" min="1" max="10" step="1" required>
+                <div class="input-group">
+                    <label for="num2" class="input-label">Количество комнат</label>
+                    <input type="number" class="input-field" id="num2" placeholder="2" min="1" max="10" step="1" required>
                     <div id="error2" class="error-message">Введите от 1 до 10 комнат</div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="num3">Этажей в доме</label>
-                    <input type="number" class="form-control" id="num3" placeholder="10" min="1" max="100" step="1" required>
+                <div class="input-group">
+                    <label for="num3" class="input-label">Этажей в доме</label>
+                    <input type="number" class="input-field" id="num3" placeholder="16" min="1" max="100" step="1" required>
                     <div id="error3" class="error-message">Введите от 1 до 100 этажей</div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="num4">Этаж квартиры</label>
-                    <input type="number" class="form-control" id="num4" placeholder="5" min="1" max="100" step="1" required>
+                <div class="input-group">
+                    <label for="num4" class="input-label">Этаж квартиры</label>
+                    <input type="number" class="input-field" id="num4" placeholder="5" min="1" max="100" step="1" required>
                     <div id="error4" class="error-message">Введите от 1 до 100 этаж</div>
                 </div>
                 
-                <button type="button" class="btn" onclick="validateAndSubmit()">Рассчитать стоимость</button>
+                <button type="button" class="submit-btn" onclick="validateAndSubmit()">Рассчитать стоимость</button>
             </form>
             
-            <div id="response"></div>
+            <div id="response" class="result-container"></div>
         </div>
     </div>
 
@@ -288,7 +343,7 @@
             if (isValid) {
                 submitForm();
             } else {
-                showResponse('Пожалуйста, исправьте ошибки в форме', 'error');
+                showResponse('Пожалуйста, проверьте введенные данные', 'error');
             }
         }
         
@@ -306,7 +361,7 @@
             };
 
             // Показываем загрузку
-            showResponse('Идёт расчёт...', 'success');
+            showResponse('Выполняется расчет...', 'loading');
             
             fetch('/api/numbers', {
                 method: 'POST',
@@ -325,29 +380,25 @@
             })
             .catch(error => {
                 console.error('Ошибка:', error);
-                showResponse('Произошла ошибка при отправке данных', 'error');
+                showResponse('Ошибка соединения с сервером', 'error');
             });
         }
         
         function showResponse(message, type) {
             const responseEl = document.getElementById('response');
             
-            // Форматирование длинных чисел с переносами
-            const formattedMessage = message.replace(/(\d+ млн \d+ тыс \d+ руб \d+ коп)/g, 
-                '<span style="display: inline-block; text-align: center;">$1</span>');
+            responseEl.textContent = message;
+            responseEl.className = 'result-container';
             
-            responseEl.innerHTML = formattedMessage;
-            responseEl.className = type;
-            responseEl.style.display = 'flex'; // Используем flex для центрирования
-            
-            // Автоматическое увеличение шрифта для длинных сообщений
-            if (message.length > 50) {
-                responseEl.style.fontSize = '1rem';
-                responseEl.style.padding = '15px 10px';
+            if (type === 'success') {
+                responseEl.classList.add('result-success');
+            } else if (type === 'error') {
+                responseEl.classList.add('result-error');
             } else {
-                responseEl.style.fontSize = '1.1rem';
-                responseEl.style.padding = '20px 15px';
+                responseEl.classList.add('result-loading');
             }
+            
+            responseEl.style.display = 'block';
         }
     </script>
 </body>

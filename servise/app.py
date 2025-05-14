@@ -62,8 +62,8 @@ def format_rubles(amount: float) -> str:
         parts.append(f"{thousands} тыс")
     if rubles > 0 or not parts:
         parts.append(f"{rubles} руб")
-    if kopecks > 0:
-        parts.append(f"{kopecks} коп")
+    #if kopecks > 0:
+        #parts.append(f"{kopecks} коп")
     
     return ' '.join(parts)
 
