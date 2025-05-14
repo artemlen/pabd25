@@ -39,7 +39,7 @@ housing_price_prediction/
 ### Как запустить
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/yourusername/housing_price_prediction.git
+git clone https://github.com/artemlen/pabd25.git
 ```
 
 2. Установите зависимости:

@@ -7,7 +7,7 @@ git add .
 git commit -m "Description" 
 git push origin main --force
 
-Запуск
+Запуск проекта
 python -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt

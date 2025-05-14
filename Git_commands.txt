@@ -1,0 +1,5 @@
+Сделать новую ветку, которая будет копией текущей
+git checkout -b lin_reg_1
+
+перейти в ветку main
+git checkout main
