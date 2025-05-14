@@ -1,7 +1,13 @@
+Подключение к github.
 git clone https://github.com/artemlen/pabd25.git
 git remote -v
 git remote set-url origin https://github.com/artemlen/pabd25.git
 git remote -v
 git add .
 git commit -m "Description" 
-git push origin main
+git push origin main --force
+
+Запуск
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
