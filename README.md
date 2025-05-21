@@ -98,7 +98,7 @@ python ./pabd25/Servise/app.py
 3. API endpoint доступен  по ссылке `http://127.0.0.1:8000/api/numbers`
 
 ### Интерфейс сервиса
-![](img/interface.png)
+![](img/Interface.png)
 
 ### Автор
 Артём Ленгауэр
