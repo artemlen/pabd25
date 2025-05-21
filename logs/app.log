@@ -1404,3 +1404,20 @@ TypeError: can only concatenate str (not "float") to str
 2025-05-21 13:31:29,569 - INFO - Input data: 180.0 4 17 6
 2025-05-21 13:31:29,577 - INFO - Prediction price: 51 млн 840 тыс руб
 2025-05-21 13:31:29,578 - INFO - 127.0.0.1 - - [21/May/2025 13:31:29] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 14:35:29,426 - INFO - Model was founded
+2025-05-21 14:35:29,426 - INFO - Starting server...
+2025-05-21 14:35:29,454 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.77.199:8000
+2025-05-21 14:35:29,454 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 14:35:29,455 - INFO -  * Restarting with stat
+2025-05-21 14:35:30,276 - INFO - Model was founded
+2025-05-21 14:35:30,276 - INFO - Starting server...
+2025-05-21 14:35:30,291 - WARNING -  * Debugger is active!
+2025-05-21 14:35:30,300 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 14:35:40,773 - INFO - 127.0.0.1 - - [21/May/2025 14:35:40] "GET / HTTP/1.1" 200 -
+2025-05-21 14:35:48,163 - INFO - Request received for /api/numbers
+2025-05-21 14:35:48,164 - INFO - Input data: 75.0 3 17 4
+2025-05-21 14:35:48,174 - INFO - Prediction price: 24 млн 925 тыс руб
+2025-05-21 14:35:48,175 - INFO - 127.0.0.1 - - [21/May/2025 14:35:48] "POST /api/numbers HTTP/1.1" 200 -
