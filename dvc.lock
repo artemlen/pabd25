@@ -1,0 +1,8 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python ./src/prepare.py
+  train_model:
+    cmd: python ./src/train_save_model.py
+  test_model:
+    cmd: python ./src/check.py
