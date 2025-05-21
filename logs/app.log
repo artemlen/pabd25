@@ -1082,3 +1082,221 @@ MAPE: 1.1270
 2025-05-14 22:05:18,755 - INFO - Request received for /api/numbers
 2025-05-14 22:05:18,756 - INFO - Input data: 100.0m², 3 rooms, floor 1/25
 2025-05-14 22:05:18,761 - INFO - 127.0.0.1 - - [14/May/2025 22:05:18] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 09:15:53,270 - INFO - Model loaded successfully from ./pabd25/models/model_house_prise.pkl
+2025-05-21 09:15:53,271 - INFO - Model expects features: ['total_meters', 'floor', 'floors_count', 'rooms_count']
+2025-05-21 09:15:53,272 - INFO - Starting server...
+2025-05-21 09:17:35,287 - INFO - Model loaded successfully from ./pabd25/models/model_house_prise.pkl
+2025-05-21 09:17:35,287 - INFO - Model expects features: ['total_meters', 'floor', 'floors_count', 'rooms_count']
+2025-05-21 09:17:35,288 - INFO - Starting server...
+2025-05-21 09:17:35,334 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.77.199:8000
+2025-05-21 09:17:35,334 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 09:17:35,334 - INFO -  * Restarting with stat
+2025-05-21 09:17:36,179 - INFO - Model loaded successfully from ./pabd25/models/model_house_prise.pkl
+2025-05-21 09:17:36,179 - INFO - Model expects features: ['total_meters', 'floor', 'floors_count', 'rooms_count']
+2025-05-21 09:17:36,180 - INFO - Starting server...
+2025-05-21 09:17:36,201 - WARNING -  * Debugger is active!
+2025-05-21 09:17:36,209 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 09:17:48,089 - INFO - 127.0.0.1 - - [21/May/2025 09:17:48] "GET / HTTP/1.1" 200 -
+2025-05-21 09:17:48,499 - INFO - 127.0.0.1 - - [21/May/2025 09:17:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-21 09:17:55,256 - INFO - Request received for /api/numbers
+2025-05-21 09:17:55,257 - INFO - Input data: 45.0m², 2 rooms, floor 5/16
+2025-05-21 09:17:55,270 - INFO - 127.0.0.1 - - [21/May/2025 09:17:55] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 09:26:45,024 - INFO -  * Detected change in '/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/pabd25/servise/CreateModel.py', reloading
+2025-05-21 09:26:45,149 - INFO -  * Restarting with stat
+2025-05-21 09:26:46,282 - INFO - Model loaded successfully from ./pabd25/models/model_house_prise.pkl
+2025-05-21 09:26:46,283 - INFO - Model expects features: ['total_meters', 'floor', 'floors_count', 'rooms_count']
+2025-05-21 09:26:46,283 - INFO - Starting server...
+2025-05-21 09:26:46,299 - WARNING -  * Debugger is active!
+2025-05-21 09:26:46,305 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 11:51:42,950 - INFO - Starting server...
+2025-05-21 11:51:42,988 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.77.199:8000
+2025-05-21 11:51:42,988 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 11:51:42,989 - INFO -  * Restarting with stat
+2025-05-21 11:51:43,817 - INFO - Starting server...
+2025-05-21 11:51:43,831 - WARNING -  * Debugger is active!
+2025-05-21 11:51:43,841 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 11:51:57,264 - INFO - Request received for /api/numbers
+2025-05-21 11:51:57,265 - INFO - Input data: 75.0m², 3 rooms, floor 4/17
+2025-05-21 11:51:57,276 - INFO - 127.0.0.1 - - [21/May/2025 11:51:57] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:52:02,990 - INFO - Request received for /api/numbers
+2025-05-21 11:52:02,991 - INFO - Input data: 75.0m², 3 rooms, floor 5/17
+2025-05-21 11:52:02,994 - INFO - 127.0.0.1 - - [21/May/2025 11:52:02] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:52:06,473 - INFO - Request received for /api/numbers
+2025-05-21 11:52:06,473 - INFO - Input data: 75.0m², 3 rooms, floor 5/5
+2025-05-21 11:52:06,476 - INFO - 127.0.0.1 - - [21/May/2025 11:52:06] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:52:12,657 - INFO - Request received for /api/numbers
+2025-05-21 11:52:12,658 - INFO - Input data: 24.0m², 3 rooms, floor 5/5
+2025-05-21 11:52:12,661 - INFO - 127.0.0.1 - - [21/May/2025 11:52:12] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:53:27,367 - INFO -  * Detected change in '/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/pabd25/servise/app.py', reloading
+2025-05-21 11:53:27,486 - INFO -  * Restarting with stat
+2025-05-21 11:53:28,637 - INFO - Starting server...
+2025-05-21 11:53:28,653 - WARNING -  * Debugger is active!
+2025-05-21 11:53:28,663 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 11:53:43,018 - INFO -  * Detected change in '/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/pabd25/servise/app.py', reloading
+2025-05-21 11:53:43,126 - INFO -  * Restarting with stat
+2025-05-21 11:53:44,235 - INFO - Starting server...
+2025-05-21 11:53:44,250 - WARNING -  * Debugger is active!
+2025-05-21 11:53:44,257 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 11:53:47,684 - INFO - Request received for /api/numbers
+2025-05-21 11:53:47,685 - INFO - Input data: 24.0m², 3 rooms, floor 5/5
+2025-05-21 11:53:47,695 - INFO - 127.0.0.1 - - [21/May/2025 11:53:47] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:53:51,465 - INFO - Request received for /api/numbers
+2025-05-21 11:53:51,466 - INFO - Input data: 75.0m², 3 rooms, floor 5/5
+2025-05-21 11:53:51,469 - INFO - 127.0.0.1 - - [21/May/2025 11:53:51] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:54:00,615 - INFO - Request received for /api/numbers
+2025-05-21 11:54:00,615 - INFO - Input data: 54.0m², 3 rooms, floor 5/5
+2025-05-21 11:54:00,618 - INFO - 127.0.0.1 - - [21/May/2025 11:54:00] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:54:04,699 - INFO - Request received for /api/numbers
+2025-05-21 11:54:04,699 - INFO - Input data: 54.0m², 2 rooms, floor 5/5
+2025-05-21 11:54:04,705 - INFO - 127.0.0.1 - - [21/May/2025 11:54:04] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:54:11,516 - INFO - Request received for /api/numbers
+2025-05-21 11:54:11,517 - INFO - Input data: 54.0m², 2 rooms, floor 1/5
+2025-05-21 11:54:11,519 - INFO - 127.0.0.1 - - [21/May/2025 11:54:11] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 11:54:26,354 - INFO -  * Detected change in '/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/pabd25/servise/app.py', reloading
+2025-05-21 11:54:26,469 - INFO -  * Restarting with stat
+2025-05-21 11:54:27,608 - INFO - Starting server...
+2025-05-21 11:54:27,625 - WARNING -  * Debugger is active!
+2025-05-21 11:54:27,632 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 12:47:10,276 - INFO - Starting server...
+2025-05-21 12:47:10,308 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.77.199:8000
+2025-05-21 12:47:10,308 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 12:47:10,309 - INFO -  * Restarting with stat
+2025-05-21 12:47:11,161 - INFO - Starting server...
+2025-05-21 12:47:11,175 - WARNING -  * Debugger is active!
+2025-05-21 12:47:11,185 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 12:47:16,819 - INFO - Request received for /api/numbers
+2025-05-21 12:47:16,820 - INFO - Input data: 54.0m², 2 rooms, floor 1/5
+2025-05-21 12:47:16,826 - INFO - 127.0.0.1 - - [21/May/2025 12:47:16] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:47:26,379 - INFO - Request received for /api/numbers
+2025-05-21 12:47:26,380 - INFO - Input data: 75.0m², 3 rooms, floor 4/17
+2025-05-21 12:47:26,384 - INFO - 127.0.0.1 - - [21/May/2025 12:47:26] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:47:31,312 - INFO - Request received for /api/numbers
+2025-05-21 12:47:31,312 - INFO - Input data: 75.0m², 2 rooms, floor 4/17
+2025-05-21 12:47:31,315 - INFO - 127.0.0.1 - - [21/May/2025 12:47:31] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:47:38,129 - INFO - Request received for /api/numbers
+2025-05-21 12:47:38,130 - INFO - Input data: 67.0m², 2 rooms, floor 4/17
+2025-05-21 12:47:38,136 - INFO - 127.0.0.1 - - [21/May/2025 12:47:38] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:47:43,529 - INFO - Request received for /api/numbers
+2025-05-21 12:47:43,530 - INFO - Input data: 40.0m², 2 rooms, floor 4/17
+2025-05-21 12:47:43,533 - INFO - 127.0.0.1 - - [21/May/2025 12:47:43] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:47:52,247 - INFO - Request received for /api/numbers
+2025-05-21 12:47:52,248 - INFO - Input data: 40.0m², 2 rooms, floor 4/5
+2025-05-21 12:47:52,251 - INFO - 127.0.0.1 - - [21/May/2025 12:47:52] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:47:55,279 - INFO - Request received for /api/numbers
+2025-05-21 12:47:55,279 - INFO - Input data: 40.0m², 2 rooms, floor 1/5
+2025-05-21 12:47:55,282 - INFO - 127.0.0.1 - - [21/May/2025 12:47:55] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:47:58,629 - INFO - Request received for /api/numbers
+2025-05-21 12:47:58,629 - INFO - Input data: 40.0m², 2 rooms, floor 1/17
+2025-05-21 12:47:58,633 - INFO - 127.0.0.1 - - [21/May/2025 12:47:58] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:48:24,565 - INFO - Request received for /api/numbers
+2025-05-21 12:48:24,566 - INFO - Input data: 40.0m², 3 rooms, floor 1/17
+2025-05-21 12:48:24,576 - INFO - 127.0.0.1 - - [21/May/2025 12:48:24] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:48:27,763 - INFO - Request received for /api/numbers
+2025-05-21 12:48:27,763 - INFO - Input data: 40.0m², 2 rooms, floor 1/17
+2025-05-21 12:48:27,766 - INFO - 127.0.0.1 - - [21/May/2025 12:48:27] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:48:57,339 - INFO - Request received for /api/numbers
+2025-05-21 12:48:57,340 - INFO - Input data: 100.0m², 2 rooms, floor 1/17
+2025-05-21 12:48:57,343 - INFO - 127.0.0.1 - - [21/May/2025 12:48:57] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:49:00,696 - INFO - Request received for /api/numbers
+2025-05-21 12:49:00,697 - INFO - Input data: 150.0m², 2 rooms, floor 1/17
+2025-05-21 12:49:00,700 - INFO - 127.0.0.1 - - [21/May/2025 12:49:00] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:49:05,313 - INFO - Request received for /api/numbers
+2025-05-21 12:49:05,314 - INFO - Input data: 250.0m², 2 rooms, floor 1/17
+2025-05-21 12:49:05,317 - INFO - 127.0.0.1 - - [21/May/2025 12:49:05] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:49:08,530 - INFO - Request received for /api/numbers
+2025-05-21 12:49:08,530 - INFO - Input data: 15.0m², 2 rooms, floor 1/17
+2025-05-21 12:49:08,532 - INFO - 127.0.0.1 - - [21/May/2025 12:49:08] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:49:15,378 - INFO - Request received for /api/numbers
+2025-05-21 12:49:15,379 - INFO - Input data: 10.0m², 2 rooms, floor 1/17
+2025-05-21 12:49:15,381 - INFO - 127.0.0.1 - - [21/May/2025 12:49:15] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:50:13,817 - INFO -  * Detected change in '/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/pabd25/servise/CreateModelLinearReg.py', reloading
+2025-05-21 12:50:13,936 - INFO -  * Restarting with stat
+2025-05-21 12:50:14,358 - ERROR - No model found in directory
+2025-05-21 12:50:14,358 - INFO - Starting server...
+2025-05-21 12:50:14,376 - WARNING -  * Debugger is active!
+2025-05-21 12:50:14,383 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 12:56:18,503 - INFO - Starting server...
+2025-05-21 12:56:18,530 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.77.199:8000
+2025-05-21 12:56:18,530 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 12:56:18,531 - INFO -  * Restarting with stat
+2025-05-21 12:56:19,345 - INFO - Starting server...
+2025-05-21 12:56:19,360 - WARNING -  * Debugger is active!
+2025-05-21 12:56:19,368 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 12:56:36,016 - INFO - Request received for /api/numbers
+2025-05-21 12:56:36,017 - INFO - Input data: 15.0m², 2 rooms, floor 1/17
+2025-05-21 12:56:36,023 - INFO - 127.0.0.1 - - [21/May/2025 12:56:36] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:56:42,447 - INFO - Request received for /api/numbers
+2025-05-21 12:56:42,448 - INFO - Input data: 55.0m², 3 rooms, floor 1/17
+2025-05-21 12:56:42,451 - INFO - 127.0.0.1 - - [21/May/2025 12:56:42] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:56:48,431 - INFO - Request received for /api/numbers
+2025-05-21 12:56:48,431 - INFO - Input data: 55.0m², 2 rooms, floor 1/17
+2025-05-21 12:56:48,434 - INFO - 127.0.0.1 - - [21/May/2025 12:56:48] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:56:52,262 - INFO - Request received for /api/numbers
+2025-05-21 12:56:52,263 - INFO - Input data: 55.0m², 2 rooms, floor 5/17
+2025-05-21 12:56:52,267 - INFO - 127.0.0.1 - - [21/May/2025 12:56:52] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:56:54,962 - INFO - Request received for /api/numbers
+2025-05-21 12:56:54,962 - INFO - Input data: 55.0m², 2 rooms, floor 5/5
+2025-05-21 12:56:54,965 - INFO - 127.0.0.1 - - [21/May/2025 12:56:54] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:04,846 - INFO - Request received for /api/numbers
+2025-05-21 12:57:04,846 - INFO - Input data: 75.0m², 3 rooms, floor 4/17
+2025-05-21 12:57:04,849 - INFO - 127.0.0.1 - - [21/May/2025 12:57:04] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:09,361 - INFO - Request received for /api/numbers
+2025-05-21 12:57:09,362 - INFO - Input data: 75.0m², 3 rooms, floor 4/5
+2025-05-21 12:57:09,365 - INFO - 127.0.0.1 - - [21/May/2025 12:57:09] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:19,896 - INFO - Request received for /api/numbers
+2025-05-21 12:57:19,897 - INFO - Input data: 75.0m², 4 rooms, floor 4/17
+2025-05-21 12:57:19,899 - INFO - 127.0.0.1 - - [21/May/2025 12:57:19] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:23,312 - INFO - Request received for /api/numbers
+2025-05-21 12:57:23,313 - INFO - Input data: 100.0m², 4 rooms, floor 4/17
+2025-05-21 12:57:23,315 - INFO - 127.0.0.1 - - [21/May/2025 12:57:23] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:25,547 - INFO - Request received for /api/numbers
+2025-05-21 12:57:25,547 - INFO - Input data: 100.0m², 3 rooms, floor 4/17
+2025-05-21 12:57:25,550 - INFO - 127.0.0.1 - - [21/May/2025 12:57:25] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:29,779 - INFO - Request received for /api/numbers
+2025-05-21 12:57:29,780 - INFO - Input data: 150.0m², 3 rooms, floor 4/17
+2025-05-21 12:57:29,783 - INFO - 127.0.0.1 - - [21/May/2025 12:57:29] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:34,012 - INFO - Request received for /api/numbers
+2025-05-21 12:57:34,012 - INFO - Input data: 42.0m², 3 rooms, floor 4/17
+2025-05-21 12:57:34,015 - INFO - 127.0.0.1 - - [21/May/2025 12:57:34] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:37,129 - INFO - Request received for /api/numbers
+2025-05-21 12:57:37,130 - INFO - Input data: 28.0m², 3 rooms, floor 4/17
+2025-05-21 12:57:37,133 - INFO - 127.0.0.1 - - [21/May/2025 12:57:37] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:57:39,845 - INFO - Request received for /api/numbers
+2025-05-21 12:57:39,846 - INFO - Input data: 10.0m², 3 rooms, floor 4/17
+2025-05-21 12:57:39,850 - INFO - 127.0.0.1 - - [21/May/2025 12:57:39] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:58:51,732 - INFO - Request received for /api/numbers
+2025-05-21 12:58:51,734 - INFO - Input data: 10.0m², 1 rooms, floor 4/17
+2025-05-21 12:58:51,737 - INFO - 127.0.0.1 - - [21/May/2025 12:58:51] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:58:55,633 - INFO - Request received for /api/numbers
+2025-05-21 12:58:55,633 - INFO - Input data: 10.0m², 4 rooms, floor 4/17
+2025-05-21 12:58:55,636 - INFO - 127.0.0.1 - - [21/May/2025 12:58:55] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:59:00,049 - INFO - Request received for /api/numbers
+2025-05-21 12:59:00,050 - INFO - Input data: 50.0m², 4 rooms, floor 4/17
+2025-05-21 12:59:00,054 - INFO - 127.0.0.1 - - [21/May/2025 12:59:00] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:59:02,616 - INFO - Request received for /api/numbers
+2025-05-21 12:59:02,616 - INFO - Input data: 50.0m², 3 rooms, floor 4/17
+2025-05-21 12:59:02,619 - INFO - 127.0.0.1 - - [21/May/2025 12:59:02] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:59:08,849 - INFO - Request received for /api/numbers
+2025-05-21 12:59:08,850 - INFO - Input data: 80.0m², 3 rooms, floor 4/17
+2025-05-21 12:59:08,852 - INFO - 127.0.0.1 - - [21/May/2025 12:59:08] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:59:12,765 - INFO - Request received for /api/numbers
+2025-05-21 12:59:12,765 - INFO - Input data: 80.0m², 4 rooms, floor 4/17
+2025-05-21 12:59:12,768 - INFO - 127.0.0.1 - - [21/May/2025 12:59:12] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:59:22,098 - INFO - Request received for /api/numbers
+2025-05-21 12:59:22,099 - INFO - Input data: 250.0m², 4 rooms, floor 4/17
+2025-05-21 12:59:22,102 - INFO - 127.0.0.1 - - [21/May/2025 12:59:22] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 12:59:24,916 - INFO - Request received for /api/numbers
+2025-05-21 12:59:24,916 - INFO - Input data: 250.0m², 3 rooms, floor 4/17
+2025-05-21 12:59:24,919 - INFO - 127.0.0.1 - - [21/May/2025 12:59:24] "POST /api/numbers HTTP/1.1" 200 -

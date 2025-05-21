@@ -9,6 +9,6 @@ git push origin main --force
 
 Запуск
 python -m venv venv
-.\venv\Scripts\activate
+.\venv\Scripts\activate # Для Windows
+source venv/bin/activate # Для Mac OS
 pip install -r requirements.txt
-2

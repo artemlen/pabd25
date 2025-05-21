@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 import logging
-import pickle
+import joblib
 import numpy as np
 import pandas as pd
 import os
@@ -18,15 +18,16 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
 def get_latest_model(directory):
     """Находит последнюю обученную модель"""
     try:
-        # Получаю самый последний pkl файл
-        files = [f for f in os.listdir(directory) if f.endswith('.pkl')]
-        latest_file = max(files, key=lambda x: os.path.getmtime(os.path.join(directory, x)))
+        files = [f for f in os.listdir(directory) if f.endswith(('.pkl', '.joblib'))]
+        if not files:
+            return None
+        latest_file = max(files, key=lambda f: os.path.getctime(os.path.join(directory, f)))
         return os.path.join(directory, latest_file)
-    except:
+    except Exception as e:
+        logger.error(f"Error finding model: {e}")
         return None
 
 # Инициализация модели глобально
@@ -38,9 +39,12 @@ def load_model():
     model_path = get_latest_model('./pabd25/models')
     if model_path:
         try:
-            with open(model_path, 'rb') as file:
-                model = pickle.load(file)
+            model = joblib.load(model_path)
+            logger.info(f"Model loaded successfully from {model_path}")
+            if hasattr(model, 'feature_names_in_'):
+                logger.info(f"Model expects features: {list(model.feature_names_in_)}")
         except Exception as e:
+            logger.error(f"Error loading model: {e}")
             model = None
     else:
         logger.error("No model found in directory")
@@ -85,10 +89,9 @@ def process_numbers():
         # Создаем DataFrame с правильными признаками
         input_data = {
             'total_meters': [num1],
-            'rooms_count': [num2],
+            'floor': [num4],
             'floors_count': [num3],
-            'floor': [num4]
-            
+            'rooms_count': [num2]
         }
         
         if hasattr(model, 'feature_names_in_') and 'relative_floor' in model.feature_names_in_:
@@ -99,12 +102,13 @@ def process_numbers():
         if hasattr(model, 'feature_names_in_'):
             input_df = input_df[list(model.feature_names_in_)]
         
-        prediction = int(model.predict(input_df).round(0))
-        formatted_price = format_rubles(prediction)
+        prediction = model.predict(input_df)[0]
+        predicted_price = (prediction * 1000000).round(0)
+        formatted_price = format_rubles(predicted_price)
         
         return {
             'status': 'success',
-            'price': formatted_price,
+            'price': int(predicted_price),
             'formatted_price': formatted_price,
             'message': f'Предсказанная цена: {formatted_price}'
         }
