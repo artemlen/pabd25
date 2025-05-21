@@ -1,2 +1,3 @@
 /venv
-data
+data/raw
+data/processed

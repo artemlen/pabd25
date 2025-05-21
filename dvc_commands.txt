@@ -1,0 +1,3 @@
+git checkout -b svc_test
+pip install dvc
+dvc init
