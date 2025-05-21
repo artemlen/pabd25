@@ -1360,3 +1360,47 @@ TypeError: can only concatenate str (not "float") to str
 2025-05-21 13:11:21,460 - INFO - Starting server...
 2025-05-21 13:11:21,476 - WARNING -  * Debugger is active!
 2025-05-21 13:11:21,484 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 13:24:49,962 - INFO - Model was founded
+2025-05-21 13:24:49,963 - INFO - Starting server...
+2025-05-21 13:24:50,003 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.77.199:8000
+2025-05-21 13:24:50,003 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 13:24:50,004 - INFO -  * Restarting with stat
+2025-05-21 13:24:50,830 - INFO - Model was founded
+2025-05-21 13:24:50,831 - INFO - Starting server...
+2025-05-21 13:24:50,845 - WARNING -  * Debugger is active!
+2025-05-21 13:24:50,852 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 13:25:06,801 - INFO - Request received for /api/numbers
+2025-05-21 13:25:06,801 - INFO - Input data: 75.0 3 17 4
+2025-05-21 13:25:06,811 - INFO - Prediction price: 24 млн 925 тыс руб
+2025-05-21 13:25:06,812 - INFO - 127.0.0.1 - - [21/May/2025 13:25:06] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:28:28,080 - INFO - Model was founded
+2025-05-21 13:28:28,081 - INFO - Starting server...
+2025-05-21 13:28:28,104 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.77.199:8000
+2025-05-21 13:28:28,104 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 13:28:28,104 - INFO -  * Restarting with stat
+2025-05-21 13:28:28,924 - INFO - Model was founded
+2025-05-21 13:28:28,925 - INFO - Starting server...
+2025-05-21 13:28:28,938 - WARNING -  * Debugger is active!
+2025-05-21 13:28:28,946 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 13:28:36,507 - INFO - 127.0.0.1 - - [21/May/2025 13:28:36] "GET / HTTP/1.1" 200 -
+2025-05-21 13:31:02,856 - INFO -  * Detected change in '/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/pabd25/servise/app.py', reloading
+2025-05-21 13:31:02,980 - INFO -  * Restarting with stat
+2025-05-21 13:31:04,137 - INFO - Model was founded
+2025-05-21 13:31:04,137 - INFO - Starting server...
+2025-05-21 13:31:04,154 - WARNING -  * Debugger is active!
+2025-05-21 13:31:04,162 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 13:31:16,303 - INFO - 127.0.0.1 - - [21/May/2025 13:31:16] "GET / HTTP/1.1" 200 -
+2025-05-21 13:31:20,808 - INFO - Request received for /api/numbers
+2025-05-21 13:31:20,809 - INFO - Input data: 15.0 4 17 6
+2025-05-21 13:31:20,820 - INFO - Prediction price: 8 млн 884 тыс руб
+2025-05-21 13:31:20,820 - INFO - 127.0.0.1 - - [21/May/2025 13:31:20] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:31:29,568 - INFO - Request received for /api/numbers
+2025-05-21 13:31:29,569 - INFO - Input data: 180.0 4 17 6
+2025-05-21 13:31:29,577 - INFO - Prediction price: 51 млн 840 тыс руб
+2025-05-21 13:31:29,578 - INFO - 127.0.0.1 - - [21/May/2025 13:31:29] "POST /api/numbers HTTP/1.1" 200 -

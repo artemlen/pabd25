@@ -34,7 +34,7 @@ def Parse_flats(n_rooms, output_dir='data/raw'):
             with_saving_csv=False,
             additional_settings={
                 "start_page": 1,
-                "end_page": 2,
+                "end_page": 15,
                 "object_type": "secondary"
             })
         
