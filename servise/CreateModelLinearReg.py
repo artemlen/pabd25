@@ -116,12 +116,12 @@ def main():
     number_of_rooms = 4
     # Парсим квартиры с указанным количеством комнат
     variants_of_rooms = [i for i in range(1, number_of_rooms+1)]
-    try:
-        Parse_flats(variants_of_rooms)
-        logger.info("Successful flats parse")
-    except Exception as e:
-        print(f"Ошибка при парсинге квартир: {e}")
-        logger.error("Ошибка при парсинге квартир: "+str(e))
+    #try:
+        #Parse_flats(variants_of_rooms)
+        #logger.info("Successful flats parse")
+    #except Exception as e:
+        #print(f"Ошибка при парсинге квартир: {e}")
+        #logger.error("Ошибка при парсинге квартир: "+str(e))
 
 
     # 2. Предобработка данных

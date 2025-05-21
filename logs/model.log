@@ -4,3 +4,8 @@
 2025-05-21 13:20:46,127 - INFO - Successful model train
 2025-05-21 13:20:46,128 - INFO - Successful save model
 2025-05-21 13:20:46,130 - INFO - Successful check model with parameters: 50, 3, 17, 4
+2025-05-21 13:54:03,173 - INFO - Program start
+2025-05-21 13:54:03,182 - INFO - Successful prepare data
+2025-05-21 13:54:03,192 - INFO - Successful model train
+2025-05-21 13:54:03,193 - INFO - Successful save model
+2025-05-21 13:54:03,194 - INFO - Successful check model with parameters: 50, 3, 17, 4

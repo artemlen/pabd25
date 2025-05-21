@@ -7,18 +7,17 @@
 ```
 housing_price_prediction/
 ├── data/
-│   ├── raw/                # Исходные данные
-│   ├── processed/          # Обработанные данные
-├── models/                 # Обученные модели
-├── notebooks/              # Jupyter notebooks
-├── service/                # Сервис предсказания цены на недвижимость
-│   ├── templates/          # Шаблоны для веб-приложения
-│   └── app.py              # Flask приложение
-├── src/                    # Исходный код
-│   ├── data.py             # Обработка данных
-│   ├── models.py           # Модели машинного обучения
-│   └── utils.py            # Вспомогательные функции
-├── requirements.txt        # Требования к зависимостям
+│   ├── raw/                    # Исходные данные
+├── logs/                       # Логи программ
+├── models/                     # Обученные модели
+├── notebooks/                  # Jupyter notebooks
+├── servise/                    # Сервис предсказания цены на недвижимость
+│   ├── templates/              # Шаблоны для веб-приложения
+│   ├── app.py                  # Flask приложение
+│   └── CreateModelLinearReg.py # Создание модели для предсказания цен
+├── src/                        # Исходный код
+├── requirements.txt            # Требования к зависимостям
+├── start_commands.txt          # Команды для быстрого развертывания приложения 
 └── README.md
 ```
 
@@ -26,17 +25,15 @@ housing_price_prediction/
 ![](img/arch.png)
 
 ### Данные
-Используемые данные включают следующие характеристики:
-* Площадь жилья
-* Количество комнат
-* Количество этажей
-* Номер этажа
+Используемые данные для обучения модели включают в себя следующие признаки:
+* Площадь жилья (total_meters)
+* Количество комнат (rooms_count)
+* Количество этажей (floors_count)
+* Номер этажа (floor)
 
 
-В выборке 1, 2, 3 комнатные квартиры 
-* 246 записей для 1-комнатных квартир 
-* 198 записей для 2-комнатных квартир
-* 272 записи для 3-комнатных квартир
+В выборке 1, 2, 3, 4 комнатные квартиры 
+* Всего 1476 записей
  
 
 
@@ -49,51 +46,61 @@ git clone https://github.com/artemlen/pabd25.git
 2. Создайте venv и установите зависимости:
 ```bash
 python -m venv venv
-venv/Scripts/activate
+venv/Scripts/activate # Для Windows
+source venv/bin/activate # Для Mac OS
 pip install -r requirements.txt
 ```
 
 3. Запустите цикл сбора данных и обучения:
 ```bash
-python src/lifecycle.py --parse_data
+python ./servise/CreateModelLinearReg.py
+```
+4. Запустите flusk приложение:
+```bash
+python ./pabd25/Servise/app.py
 ```
 
-
 ### Модели машинного обучения
-* **Gradient Boosting** - градиентный бустинг
+* **Linear Regression** - Линейная регрессия
 
 
 ### Метрики оценки
 * **Mean Squared Error (MSE)**
-* **Root Mean Squared Error (RMSE)**
 * **R² Score**
 
 ### Метрики модели
-* MSE: 88568753539475.33
-* RMSE: 9411097.36
-* R²: 0.632828
+* MSE: 35528153034599.84
+* R²: 0.4999135855413235
 
 ### Как использовать модель
 1. Загрузите данные в формате CSV
-2. Обработайте данные с помощью предобработчиков
-3. Загрузите обученную модель
+2. Обработайте данные с помощью предобработчиков. В данных должно остаться 4 признака:
+* total_meters
+* rooms_count
+* floors_count
+* floor
+3. Загрузите обученную модель из файла ".pkl"
+```bash
+with open(model_path, 'rb') as file:
+    model = pickle.load(file)
+```
 4. Сделайте предсказания
+```bash
+prediction = int(model.predict(input_df).round(0))
+```
 
 ### Использование сервиса предиктивной аналитики в dev mode
 1. Запустите сервис с указанием имени модели
 ```sh
-python service/app.py -m model_path
+python ./pabd25/Servise/app.py
 ```
-2. Веб приложение доступно по ссылке `http://127.0.0.1:5000` 
-3. API endpoint доступен  по ссылке `http://127.0.0.1:5000/api/numbers`
+2. Веб приложение доступно по ссылке `http://127.0.0.1:8000` 
+3. API endpoint доступен  по ссылке `http://127.0.0.1:8000/api/numbers`
 
 
-### Команда
-* **Data Scientist**: Артём Ленгауэр
-* **ML Engineer**: Артём Ленгауэр
-* **Product Manager**: Артём Ленгауэр
+### Автор
+Артём Ленгауэр
 
 
 ### Контакты
-Для вопросов и предложений обращайтесь:
 * Email: artem_len@mail.ru
