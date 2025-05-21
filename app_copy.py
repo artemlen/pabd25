@@ -25,6 +25,7 @@ def get_latest_model(directory):
         if not files:
             return None
         latest_file = max(files, key=lambda f: os.path.getctime(os.path.join(directory, f)))
+        logger.info("Model was founded")
         return os.path.join(directory, latest_file)
     except Exception as e:
         logger.error(f"Error finding model: {e}")

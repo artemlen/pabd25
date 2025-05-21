@@ -1,3 +1,5 @@
+import logging
+
 # Импорт для parse_flats
 import datetime
 import os
@@ -32,7 +34,7 @@ def Parse_flats(n_rooms, output_dir='data/raw'):
             with_saving_csv=False,
             additional_settings={
                 "start_page": 1,
-                "end_page": 15,
+                "end_page": 2,
                 "object_type": "secondary"
             })
         
@@ -107,6 +109,7 @@ def Check_model(test_data, input_dir='models'):
 
 def main():
 
+
     # 1. Парсинг данных
 
     # Указываем количество комнат
@@ -115,22 +118,30 @@ def main():
     variants_of_rooms = [i for i in range(1, number_of_rooms+1)]
     try:
         Parse_flats(variants_of_rooms)
+        logger.info("Successful flats parse")
     except Exception as e:
         print(f"Ошибка при парсинге квартир: {e}")
+        logger.error("Ошибка при парсинге квартир: "+str(e))
 
 
     # 2. Предобработка данных
     X_train, X_test, y_train, y_test = Prepare_data()
+    logger.info("Successful prepare data")
 
 
     # 3. Обучение модели
     modelLR = Linear_model_train(X_train, X_test, y_train, y_test)
+    logger.info("Successful model train")
+
 
     # 4. Сохранение модели
     Save_model(modelLR)
+    logger.info("Successful save model")
+
 
     # 5. Проверка модели
     Check_model([50, 3, 17, 4])
+    logger.info("Successful check model with parameters: 50, 3, 17, 4")
 
 
 
@@ -138,4 +149,18 @@ def main():
     
 
 if __name__ == '__main__':
+    
+    # Создание логера
+    logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('./logs/model.log', encoding='utf-8'),
+        logging.StreamHandler()
+        ]
+    )
+    logger = logging.getLogger(__name__)
+
+    # запуск программы
+    logger.info("Program start")
     main()

@@ -1300,3 +1300,63 @@ MAPE: 1.1270
 2025-05-21 12:59:24,916 - INFO - Request received for /api/numbers
 2025-05-21 12:59:24,916 - INFO - Input data: 250.0m², 3 rooms, floor 4/17
 2025-05-21 12:59:24,919 - INFO - 127.0.0.1 - - [21/May/2025 12:59:24] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:08:44,288 - INFO - Model was founded
+2025-05-21 13:08:44,289 - INFO - Starting server...
+2025-05-21 13:08:44,317 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.77.199:8000
+2025-05-21 13:08:44,317 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-21 13:08:44,318 - INFO -  * Restarting with stat
+2025-05-21 13:08:45,154 - INFO - Model was founded
+2025-05-21 13:08:45,155 - INFO - Starting server...
+2025-05-21 13:08:45,169 - WARNING -  * Debugger is active!
+2025-05-21 13:08:45,178 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 13:09:09,637 - INFO - Request received for /api/numbers
+2025-05-21 13:09:09,638 - ERROR - Error in prediction: can only concatenate str (not "float") to str
+Traceback (most recent call last):
+  File "/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/./pabd25/servise/app.py", line 81, in process_numbers
+    logger.info("Input data: "+num1+" "+num2+" "+num3+" "+num4)
+                ~~~~~~~~~~~~~~^~~~~
+TypeError: can only concatenate str (not "float") to str
+2025-05-21 13:09:09,641 - INFO - 127.0.0.1 - - [21/May/2025 13:09:09] "[31m[1mPOST /api/numbers HTTP/1.1[0m" 400 -
+2025-05-21 13:09:54,787 - INFO -  * Detected change in '/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/pabd25/servise/app.py', reloading
+2025-05-21 13:09:54,904 - INFO -  * Restarting with stat
+2025-05-21 13:09:56,051 - INFO - Model was founded
+2025-05-21 13:09:56,052 - INFO - Starting server...
+2025-05-21 13:09:56,069 - WARNING -  * Debugger is active!
+2025-05-21 13:09:56,078 - INFO -  * Debugger PIN: 177-736-841
+2025-05-21 13:09:59,227 - INFO - Request received for /api/numbers
+2025-05-21 13:09:59,233 - INFO - Input data: 250.0 3 17 4
+2025-05-21 13:09:59,260 - INFO - Prediction price: 70 млн 484 тыс руб
+2025-05-21 13:09:59,261 - INFO - 127.0.0.1 - - [21/May/2025 13:09:59] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:10:22,418 - INFO - Request received for /api/numbers
+2025-05-21 13:10:22,419 - INFO - Input data: 50.0 2 25 1
+2025-05-21 13:10:22,423 - INFO - Prediction price: 21 млн 36 тыс руб
+2025-05-21 13:10:22,423 - INFO - 127.0.0.1 - - [21/May/2025 13:10:22] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:10:24,650 - INFO - Request received for /api/numbers
+2025-05-21 13:10:24,650 - INFO - Input data: 50.0 2 25 5
+2025-05-21 13:10:24,654 - INFO - Prediction price: 21 млн 43 тыс руб
+2025-05-21 13:10:24,654 - INFO - 127.0.0.1 - - [21/May/2025 13:10:24] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:10:29,633 - INFO - Request received for /api/numbers
+2025-05-21 13:10:29,633 - INFO - Input data: 50.0 2 40 5
+2025-05-21 13:10:29,638 - INFO - Prediction price: 25 млн 170 тыс руб
+2025-05-21 13:10:29,639 - INFO - 127.0.0.1 - - [21/May/2025 13:10:29] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:10:31,983 - INFO - Request received for /api/numbers
+2025-05-21 13:10:31,984 - INFO - Input data: 50.0 2 5 5
+2025-05-21 13:10:31,987 - INFO - Prediction price: 15 млн 540 тыс руб
+2025-05-21 13:10:31,987 - INFO - 127.0.0.1 - - [21/May/2025 13:10:31] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:10:41,170 - INFO - Request received for /api/numbers
+2025-05-21 13:10:41,170 - INFO - Input data: 65.0 2 5 5
+2025-05-21 13:10:41,173 - INFO - Prediction price: 19 млн 445 тыс руб
+2025-05-21 13:10:41,174 - INFO - 127.0.0.1 - - [21/May/2025 13:10:41] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:10:42,583 - INFO - Request received for /api/numbers
+2025-05-21 13:10:42,583 - INFO - Input data: 65.0 2 5 5
+2025-05-21 13:10:42,586 - INFO - Prediction price: 19 млн 445 тыс руб
+2025-05-21 13:10:42,586 - INFO - 127.0.0.1 - - [21/May/2025 13:10:42] "POST /api/numbers HTTP/1.1" 200 -
+2025-05-21 13:11:20,159 - INFO -  * Detected change in '/Users/artemlengauer/Documents/Учеба/2 полугодие/PABD/pabd25/servise/CreateModelLinearReg.py', reloading
+2025-05-21 13:11:20,274 - INFO -  * Restarting with stat
+2025-05-21 13:11:21,459 - INFO - Model was founded
+2025-05-21 13:11:21,460 - INFO - Starting server...
+2025-05-21 13:11:21,476 - WARNING -  * Debugger is active!
+2025-05-21 13:11:21,484 - INFO -  * Debugger PIN: 177-736-841

@@ -40,6 +40,7 @@ def load_model():
         try:
             with open(model_path, 'rb') as file:
                 model = pickle.load(file)
+            logger.info("Model was founded")
         except Exception as e:
             model = None
     else:
@@ -77,7 +78,7 @@ def process_numbers():
         num3 = int(data.get('number3', 1))
         num4 = int(data.get('number4', 1))
         
-        logger.info(f"Input data: {num1}m², {num2} rooms, floor {num4}/{num3}")
+        logger.info("Input data: "+str(num1)+" "+str(num2)+" "+str(num3)+" "+str(num4))
 
         if model is None:
             raise RuntimeError("Модель не загружена")
@@ -101,6 +102,7 @@ def process_numbers():
         
         prediction = int(model.predict(input_df).round(0))
         formatted_price = format_rubles(prediction)
+        logger.info("Prediction price: "+str(formatted_price))
         
         return {
             'status': 'success',
