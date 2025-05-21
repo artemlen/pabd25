@@ -1,12 +1,13 @@
 git checkout -b dvc_test
+python -m venv venv
 pip install dvc
 dvc init
 dvc add data/raw  
 git add .
-git commit -m ""
+git commit -m "comment"
 git push origin dvc_test --force
 git checkout main
 git merge dvc_test 
 git add .
-git commit -m ""
+git commit -m "comment2"
 git push origin main --force
